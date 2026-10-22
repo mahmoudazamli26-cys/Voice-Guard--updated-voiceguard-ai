@@ -1,0 +1,9 @@
+{
+  "version": "6.2.3",
+  "wheel_url": "https://files.pythonhosted.org/packages/84/ef/9099037ed6f180ea33220178df4107112c0ce2bf5fb4d6f6ab19db2844ed/silero_vad-6.2.3-py3-none-any.whl",
+  "wheel_sha256": "7b7f5436cfcb02fae583a05b512ea96467fd449fe54cb49a5e4f06c51a1e43b8",
+  "model": "silero_vad/data/silero_vad.jit",
+  "model_sha256": "e1122837f4154c511485fe0b9c64455f7b929c96fbb8d79fbdb336383ebd3720",
+  "upstream": "https://github.com/snakers4/silero-vad",
+  "license": "MIT"
+}

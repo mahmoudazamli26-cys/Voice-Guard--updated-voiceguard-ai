@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.cache/
+reports/*
+!reports/.gitkeep
+data/*
+!data/example.csv
+!data/README.md
+models/
+*.egg-info/
+node_modules/
+physical-test*/

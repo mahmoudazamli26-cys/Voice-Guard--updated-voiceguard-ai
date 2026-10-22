@@ -1,0 +1,26 @@
+{
+  "real_threshold": 0.27700889110565186,
+  "fake_threshold": 0.7428408861160278,
+  "validation_coverage": 0.10655737704918032,
+  "max_empirical_class_error": 0.02,
+  "validation_count": 122,
+  "warning": "Empirical validation constraints do not guarantee future error rates.",
+  "identity": {
+    "models": [
+      {
+        "id": "garystafford/wav2vec2-deepfake-voice-detector",
+        "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+        "head_sha256": "efbb2566657d63a34ee8abb9cd229f1ec36cb2f0ab8887474738294d16417e4a"
+      }
+    ],
+    "window_seconds": 5,
+    "stride_seconds": 2.5,
+    "aggregation": "mean"
+  },
+  "split": "validation",
+  "experimental": true,
+  "dataset": "DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "dataset_revision": "9dbe1c09acc5907741dcd8c64d7a1d092ff1886d",
+  "dataset_sha256": "0ca7c2125f432be3966d8d6167241b8962b132c4daf4a7513a392e59e7178fde",
+  "scope": "Experimental public byte-disjoint clips; unknown speaker and pretrained-data overlap."
+}

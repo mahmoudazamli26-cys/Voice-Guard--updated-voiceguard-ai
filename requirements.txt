@@ -1,0 +1,11 @@
+# Install CPU PyTorch separately: pip install torch==2.14.1+cpu --index-url https://download.pytorch.org/whl/cpu
+transformers==5.20.2
+librosa==1.0.0
+soundfile==0.14.0
+fastapi==0.151.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+torch==2.14.1

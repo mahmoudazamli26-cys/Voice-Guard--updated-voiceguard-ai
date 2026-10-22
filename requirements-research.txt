@@ -1,0 +1,3 @@
+-r requirements-dev.txt
+# Needed only for the public, pinned Parquet benchmark; not for the application.
+pyarrow==26.0.0

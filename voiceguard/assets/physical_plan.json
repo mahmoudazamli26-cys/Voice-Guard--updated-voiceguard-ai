@@ -1,0 +1,97 @@
+{
+  "dataset": "DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "revision": "9dbe1c09acc5907741dcd8c64d7a1d092ff1886d",
+  "license": "ODC-By-1.0",
+  "source_speaker_consent": "unverified",
+  "attribution": "ArAD / DeepFake-Audio-Rangers",
+  "clips": [
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 625,
+      "sha256": "ba21d3070ffc9d1da46571702bb868743fff25dd3ae566cacaa02050f711f15f",
+      "label": 1,
+      "sample_id": "sample_01",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "b8bde5936f34111b9fc75fd893a232aa1379adcc9ebd55651545b3953c416b42"
+    },
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 353,
+      "sha256": "bcf6cbffe1ea30b97d8522b6828cbb6f49ef8c62cd6ae89f05cfbc6308ba9bb3",
+      "label": 0,
+      "sample_id": "sample_02",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "c64d56c71b5bf6493850c473276be8797bb4eb5b69eea111940f5060ee2259f5"
+    },
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 1271,
+      "sha256": "53a97fd4ea69f2b2d2bdca8bc4a24935beb3ec675916af4ee016f86dbe1f3592",
+      "label": 0,
+      "sample_id": "sample_03",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "0b753a46bf937aca4a37293be1de8081e05140941d42b5f9bcba37a36979c19d"
+    },
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 2785,
+      "sha256": "7d89a9768be1059702cdbd6de2ae8ebd207d975e682c61527f5f5997bd6a48f8",
+      "label": 0,
+      "sample_id": "sample_04",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "62e4edc3e70bd8d54056c7f098435e916bffc01cb2182ebf7487cf94651a85cc"
+    },
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 554,
+      "sha256": "5a732252ffd302906c14cad9a8b0c614d62fc82968a7f1745db6fa627f209ce3",
+      "label": 1,
+      "sample_id": "sample_05",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "ed9a323ee23fdc320de84db192108d2d1f9ebdc03b0a36d914d2fff181a18959"
+    },
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 2472,
+      "sha256": "6336f061b15828a3dd6fc864820b8bf96ef38f0f749ac251cf8fe88336177840",
+      "label": 1,
+      "sample_id": "sample_06",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "0b09352b96dbe2d8f4915fda0164b951ec604da93f40dcf91f3621b64a9c056a"
+    },
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 686,
+      "sha256": "95ffabc42126e9c471c41b33113d09485febcf6dae03cb34a8bb225d55f822d5",
+      "label": 1,
+      "sample_id": "sample_07",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "5632ac3c6e202579f57d2b6ce3c0da6361d023a8e0e30a4997849725902e72bc"
+    },
+    {
+      "source_file": "data/test-00000-of-00001.parquet",
+      "row_index": 3742,
+      "sha256": "282383d3ffa3619a07a4522ee569567cb306bae20ad4d7e8cafded65003e0a34",
+      "label": 0,
+      "sample_id": "sample_08",
+      "sample_rate": 16000,
+      "frames": 48000,
+      "channels": 1,
+      "pcm_sha256": "65c8df22486ce35fefde7f3de8d544bd504a77347cb0562edf5a9a20b34aa34d"
+    }
+  ]
+}

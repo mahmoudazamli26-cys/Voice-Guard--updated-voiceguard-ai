@@ -1,0 +1,7 @@
+-r requirements.txt
+pytest>=8,<10
+httpx==0.28.1
+bandit>=1.8,<2
+pip-audit>=2.9,<3
+matplotlib>=3.10,<4
+accelerate>=1.10,<2

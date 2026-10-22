@@ -1,0 +1,6 @@
+{
+  "name": "voiceguard-browser-checks",
+  "private": true,
+  "scripts": {"test:browser": "node tests/browser.cjs"},
+  "devDependencies": {"axe-core": "4.14.0", "playwright": "1.62.1"}
+}

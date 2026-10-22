@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "development_per_class": 32,
+  "confirmation_per_class": 128,
+  "robustness_per_class": 8,
+  "seed": 20261021,
+  "diagnostic_threshold": 0.5,
+  "minimum_accuracy_gain": 0.05,
+  "minimum_fake_recall_gain": 0.05,
+  "maximum_real_recall_loss": 0.02,
+  "selection": "One predefined multilingual candidate versus existing baseline; no threshold fitting.",
+  "limitations": "Public licensed clips; individual consent and speaker independence unverified. No training.",
+  "candidate": "Gustking/wav2vec2-large-xlsr-deepfake-audio-classification",
+  "candidate_revision": "f7050b586236dc910d1157f430def2d0647b02b4",
+  "dataset": "DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "dataset_revision": "9dbe1c09acc5907741dcd8c64d7a1d092ff1886d"
+}

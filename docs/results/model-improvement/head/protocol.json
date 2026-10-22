@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "seed": 20261022,
+  "train_per_class": 128,
+  "development_per_class": 32,
+  "confirmation_per_class": 128,
+  "robustness_per_class": 8,
+  "C": 0.1,
+  "augmentations": [
+    "original",
+    "noise_20db",
+    "mp3_32kbps"
+  ],
+  "selection": "Fixed logistic regression on frozen classifier-input features; development pass required.",
+  "dataset": "DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "dataset_revision": "9dbe1c09acc5907741dcd8c64d7a1d092ff1886d",
+  "base_model": "garystafford/wav2vec2-deepfake-voice-detector",
+  "base_revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+  "limitations": "Public licensed data; individual consent and speaker independence unverified. Experimental only."
+}

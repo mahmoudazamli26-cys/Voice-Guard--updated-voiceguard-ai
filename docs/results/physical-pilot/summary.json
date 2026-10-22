@@ -1,0 +1,174 @@
+{
+  "physical_capture": "user-attested; not independently verified",
+  "recording_permission": "user-confirmed for newly captured files",
+  "source_speaker_consent": "unverified",
+  "source_license": "ODC-By-1.0",
+  "source_dataset": "DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "source_revision": "9dbe1c09acc5907741dcd8c64d7a1d092ff1886d",
+  "identity": {
+    "models": [
+      {
+        "id": "garystafford/wav2vec2-deepfake-voice-detector",
+        "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+        "head_sha256": "efbb2566657d63a34ee8abb9cd229f1ec36cb2f0ab8887474738294d16417e4a"
+      }
+    ],
+    "window_seconds": 5,
+    "stride_seconds": 2.5,
+    "aggregation": "mean"
+  },
+  "conditions": {
+    "original": {
+      "raw_metrics": {
+        "count": 8,
+        "real_count": 4,
+        "fake_count": 4,
+        "diagnostic_threshold": 0.5,
+        "accuracy": 0.875,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "confusion_matrix_real_fake": [
+          [
+            4,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "roc_auc": 0.75,
+        "eer_interpolated": 0.25,
+        "roc": {
+          "fpr": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "tpr": [
+            0.0,
+            0.25,
+            0.75,
+            0.75,
+            1.0
+          ],
+          "thresholds": [
+            null,
+            0.7572948932647705,
+            0.5649418234825134,
+            0.32972466945648193,
+            0.2873334586620331
+          ]
+        }
+      },
+      "calibrated_decisions": {
+        "count": 8,
+        "decided_count": 1,
+        "coverage": 0.125,
+        "inconclusive_count": 7,
+        "decided_accuracy": 1.0,
+        "false_fake_rate": 0.0,
+        "false_real_rate": 0.0,
+        "speech_gate_abstentions": 0,
+        "confusion_real_fake_inconclusive": [
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      }
+    },
+    "loudspeaker_rerecorded": {
+      "raw_metrics": {
+        "count": 8,
+        "real_count": 4,
+        "fake_count": 4,
+        "diagnostic_threshold": 0.5,
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix_real_fake": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "roc_auc": 0.5625,
+        "eer_interpolated": 0.5,
+        "roc": {
+          "fpr": [
+            0.0,
+            0.0,
+            0.25,
+            0.25,
+            0.5,
+            0.5,
+            1.0,
+            1.0
+          ],
+          "tpr": [
+            0.0,
+            0.25,
+            0.25,
+            0.5,
+            0.5,
+            0.75,
+            0.75,
+            1.0
+          ],
+          "thresholds": [
+            null,
+            0.4932713210582733,
+            0.409229576587677,
+            0.262109637260437,
+            0.23513378202915192,
+            0.21643051505088806,
+            0.19713817536830902,
+            0.13912053406238556
+          ]
+        }
+      },
+      "calibrated_decisions": {
+        "count": 8,
+        "decided_count": 6,
+        "coverage": 0.75,
+        "inconclusive_count": 2,
+        "decided_accuracy": 0.5,
+        "false_fake_rate": 0.0,
+        "false_real_rate": 0.75,
+        "speech_gate_abstentions": 0,
+        "confusion_real_fake_inconclusive": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            1
+          ]
+        ]
+      }
+    }
+  },
+  "mean_absolute_score_change": 0.22416112944483757,
+  "mean_signed_score_change": -0.22416112944483757,
+  "note": "8 public pairs; unknown speaker independence. Raw classifier metrics precede the speech gate. No claim for other devices/rooms.",
+  "evidence": "Aggregate of user-uploaded phone report; source hashes/labels and computed metrics checked against frozen plan. No independent audio/capture authentication.",
+  "recordings_used_for_training": false
+}

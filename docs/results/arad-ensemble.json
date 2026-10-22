@@ -1,0 +1,2937 @@
+{
+  "status": "exploratory_only",
+  "dataset": "DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "revision": "9dbe1c09acc5907741dcd8c64d7a1d092ff1886d",
+  "source_url": "https://huggingface.co/datasets/DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "attribution": "ArAD dataset, DeepFake-Audio-Rangers; see dataset card at pinned revision.",
+  "stated_license": "ODC-By-1.0",
+  "source_file": "data/test-00000-of-00001.parquet",
+  "source_sha256": "ecf0ea125501a7f64f00aaf1200de5cd96959065337321c3b21dcf126b68febe",
+  "split": "publisher test subset",
+  "seed": 20261020,
+  "duplicates_removed_before_sampling": 0,
+  "limitations": [
+    "Exploratory balanced subset of the publisher test partition, not a full benchmark.",
+    "Speaker IDs and individual consent records are absent from the dataset card.",
+    "Speaker independence, duplicate utterance independence and model training overlap are unverified.",
+    "Publisher labels are used without independent authenticity verification.",
+    "Mostly Levantine Arabic, RVC generation and short cleaned clips limit generalization.",
+    "No calibration, fine-tuning, physical re-recording or production threshold changes.",
+    "Classifier metrics precede the API speech gate; gate rejection counts are reported separately."
+  ],
+  "identity": {
+    "models": [
+      {
+        "id": "garystafford/wav2vec2-deepfake-voice-detector",
+        "revision": "c66306024a7ede0be291e9c4558b37634782dc4e"
+      },
+      {
+        "id": "mo-thecreator/Deepfake-audio-detection",
+        "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0"
+      }
+    ],
+    "window_seconds": 5,
+    "stride_seconds": 2.5,
+    "aggregation": "mean"
+  },
+  "metrics": {
+    "count": 128,
+    "real_count": 64,
+    "fake_count": 64,
+    "diagnostic_threshold": 0.5,
+    "accuracy": 0.4609375,
+    "precision": 0.47126436781609193,
+    "recall": 0.640625,
+    "f1": 0.543046357615894,
+    "confusion_matrix_real_fake": [
+      [
+        18,
+        46
+      ],
+      [
+        23,
+        41
+      ]
+    ],
+    "roc_auc": 0.58935546875,
+    "eer_interpolated": 0.453125,
+    "roc": {
+      "fpr": [
+        0.0,
+        0.015625,
+        0.015625,
+        0.03125,
+        0.03125,
+        0.078125,
+        0.078125,
+        0.09375,
+        0.09375,
+        0.15625,
+        0.15625,
+        0.203125,
+        0.203125,
+        0.28125,
+        0.28125,
+        0.390625,
+        0.390625,
+        0.421875,
+        0.421875,
+        0.4375,
+        0.4375,
+        0.453125,
+        0.453125,
+        0.46875,
+        0.46875,
+        0.5625,
+        0.5625,
+        0.609375,
+        0.609375,
+        0.625,
+        0.625,
+        0.640625,
+        0.640625,
+        0.703125,
+        0.703125,
+        0.71875,
+        0.71875,
+        0.734375,
+        0.734375,
+        0.765625,
+        0.765625,
+        0.78125,
+        0.78125,
+        0.796875,
+        0.796875,
+        0.8125,
+        0.8125,
+        0.859375,
+        0.859375,
+        0.890625,
+        0.890625,
+        0.953125,
+        0.953125,
+        0.96875,
+        0.96875,
+        0.984375,
+        0.984375,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.0,
+        0.1875,
+        0.1875,
+        0.328125,
+        0.328125,
+        0.34375,
+        0.34375,
+        0.375,
+        0.375,
+        0.40625,
+        0.40625,
+        0.4375,
+        0.4375,
+        0.453125,
+        0.453125,
+        0.46875,
+        0.46875,
+        0.484375,
+        0.484375,
+        0.515625,
+        0.515625,
+        0.546875,
+        0.546875,
+        0.5625,
+        0.5625,
+        0.578125,
+        0.578125,
+        0.59375,
+        0.59375,
+        0.609375,
+        0.609375,
+        0.625,
+        0.625,
+        0.640625,
+        0.640625,
+        0.671875,
+        0.671875,
+        0.796875,
+        0.796875,
+        0.828125,
+        0.828125,
+        0.875,
+        0.875,
+        0.890625,
+        0.890625,
+        0.90625,
+        0.90625,
+        0.921875,
+        0.921875,
+        0.953125,
+        0.953125,
+        0.96875,
+        0.96875,
+        0.984375,
+        0.984375,
+        1.0,
+        1.0
+      ],
+      "thresholds": [
+        null,
+        0.9973096251487732,
+        0.9931711852550507,
+        0.9925279915332794,
+        0.9898258745670319,
+        0.9752324521541595,
+        0.9749745428562164,
+        0.9746114909648895,
+        0.9449988007545471,
+        0.8992186188697815,
+        0.851557731628418,
+        0.7369806915521622,
+        0.7210274636745453,
+        0.6633682399988174,
+        0.6578630208969116,
+        0.5740816295146942,
+        0.5722837299108505,
+        0.5564079843461514,
+        0.5476467125117779,
+        0.5405225344002247,
+        0.5302816927433014,
+        0.5183814335614443,
+        0.5178701803088188,
+        0.5158346556127071,
+        0.5139650031924248,
+        0.50490000564605,
+        0.5040619014762342,
+        0.502963551087305,
+        0.5021346549037844,
+        0.5020714185666293,
+        0.5017994591034949,
+        0.5011826321715489,
+        0.501082414877601,
+        0.5007063839002512,
+        0.5004098922363482,
+        0.5003226649714634,
+        0.47774741957346123,
+        0.44358108488086145,
+        0.03778554366908793,
+        0.03320820379303768,
+        0.024969640705421625,
+        0.0230910137634055,
+        0.014246740087401122,
+        0.011751388752600178,
+        0.010745126486654044,
+        0.009017192758619785,
+        0.00750277538827504,
+        0.003430277662118897,
+        0.0030638030548288953,
+        0.002300303041920415,
+        0.0016980402870103717,
+        0.0010803563200170174,
+        0.0010766338573375833,
+        0.001001106054900447,
+        0.000986170802207198,
+        0.0008866056286933599,
+        0.0008074890865827911,
+        0.0007746769269942888
+      ]
+    }
+  },
+  "model_disagreement_count": 53,
+  "speech_gate_rejections": {
+    "real": 3,
+    "fake": 2
+  },
+  "robustness": {},
+  "samples": [
+    {
+      "row_index": 48,
+      "sha256": "9403db03d935f3b80524e3e2822f9afd8d4ea7b2454d35928c6e3b49fa2d041d",
+      "label": 0,
+      "score": 0.7008821964263916,
+      "duration_seconds": 2.121,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 40.25
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.93
+        }
+      ]
+    },
+    {
+      "row_index": 71,
+      "sha256": "698d0e469175f49a1f50b5c7b1ff2ec00a0b7bd06442ab841ec5ab781e1e3971",
+      "label": 0,
+      "score": 0.003430277662118897,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.68
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 131,
+      "sha256": "09694b9ad7e92cecdc173389a6f6d067f5163c811b4e3c8d5b9d01febf6db426",
+      "label": 1,
+      "score": 0.5004098922363482,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.17
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.91
+        }
+      ]
+    },
+    {
+      "row_index": 158,
+      "sha256": "cefa1a2da7888c472cbe446e045558f3ad52690dabd67503fab55eb41343720c",
+      "label": 1,
+      "score": 0.5393278561532497,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 7.87
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 164,
+      "sha256": "3fd91b893ecfbaf6ab41fbdc06ff11a545b8ae20e68a95444c2e7fa24bc979e7",
+      "label": 0,
+      "score": 0.7369806915521622,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 47.4
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 185,
+      "sha256": "bee23eae1afa93d0c0b1c17ff0bf5b03450b2f4b0b2da824139e5f08f43fc453",
+      "label": 0,
+      "score": 0.0230910137634055,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 4.62
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 186,
+      "sha256": "cbb536fca2523c544005a61985ae9d097af893b10a70e29c9f5943d91359529d",
+      "label": 1,
+      "score": 0.9916658401489258,
+      "duration_seconds": 2.88,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.34
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 235,
+      "sha256": "891b0c89b6f148756ac0177994cfa6a82059ed243c0a0f38ce07f528df52e0f5",
+      "label": 0,
+      "score": 0.5564079843461514,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 11.34
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.94
+        }
+      ]
+    },
+    {
+      "row_index": 240,
+      "sha256": "6148ecda35060937f6de212626eb0cbf4fde6aeb04f82640cbb75175533691f9",
+      "label": 1,
+      "score": 0.8989097774028778,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 79.79
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 255,
+      "sha256": "692a8b13f1d258eddc92c9218bf79dc6b86bb129db481da18b62c89165ff1975",
+      "label": 1,
+      "score": 0.024969640705421625,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 4.99
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 270,
+      "sha256": "c5abb202ea8ff51021d86fc0d155402ddfcc669ded5124eb41f26aa59f100b45",
+      "label": 0,
+      "score": 0.6128001809120178,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 22.57
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 352,
+      "sha256": "b02d4abd5ade62f97340185c77c26031273d69d9caa0059c08ed7f98b9ef0ce2",
+      "label": 1,
+      "score": 0.0016980402870103717,
+      "duration_seconds": 1.44,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.21
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.13
+        }
+      ]
+    },
+    {
+      "row_index": 389,
+      "sha256": "ab6ad50a341ab2899d6de04ad9bb21acbc1b13559dd6708340be221ce34e257d",
+      "label": 0,
+      "score": 0.9746114909648895,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 94.93
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 396,
+      "sha256": "cfa52cdc80ca35c05aed05faf80a8c15a20538198c733330f2aec5e278a31480",
+      "label": 0,
+      "score": 0.5138422269374132,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 3.67
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.1
+        }
+      ]
+    },
+    {
+      "row_index": 428,
+      "sha256": "906de1b54e40bf6c02c44232937f09fab5f43c2ed0d0cb61c69689cf7ed5e4de",
+      "label": 1,
+      "score": 0.0008074890865827911,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.16
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 518,
+      "sha256": "315ef3424d29a3e020bb52e68f4936ef640cbe712407f7b40e84b718f4aaf5cc",
+      "label": 1,
+      "score": 0.7319100052118301,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 46.38
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 592,
+      "sha256": "87fd6ae412c31c48afded29be7780f2d2788d866062471524a42cecdeb8ab581",
+      "label": 1,
+      "score": 0.5017994591034949,
+      "duration_seconds": 0.5,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.58
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.78
+        }
+      ]
+    },
+    {
+      "row_index": 639,
+      "sha256": "69d1ad0fc56248be2cf25890f96d5a31839288de94be87655b0a41dcd159862c",
+      "label": 1,
+      "score": 0.5302816927433014,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 6.06
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 663,
+      "sha256": "58cfddd7b7f453d8470afe382de72ed8c4064769fae5577438b6f978a47093d4",
+      "label": 0,
+      "score": 0.0007746769269942888,
+      "duration_seconds": 0.262,
+      "speech_detected": false,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.15
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 724,
+      "sha256": "2ad5598cc58b4ec8d3368d1231ca7f844ef6787ff4101e7815dcaa8735aad500",
+      "label": 0,
+      "score": 0.5661789253354073,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 13.24
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 767,
+      "sha256": "a389a870e6c960c74d6d904f5867f3e40d988d2b790e05b8823792bf98ddbd01",
+      "label": 0,
+      "score": 0.03320820379303768,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 6.64
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 769,
+      "sha256": "dd0c8e66766b29deee3f41ef79792c3eeac60f31159d28ba9c90277bd96e8ce0",
+      "label": 1,
+      "score": 0.9910515248775482,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.22
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 832,
+      "sha256": "1e593cf85bc736f51e75d61bae8ce7eda6a1bb712c30ee7d6485b2d15e4705e8",
+      "label": 0,
+      "score": 0.6473390460014343,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 29.48
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.98
+        }
+      ]
+    },
+    {
+      "row_index": 886,
+      "sha256": "9aa8e7d4afbe4f63fb92a8e9aecb2d65d85144c747e7e34e7f6527a728d959eb",
+      "label": 1,
+      "score": 0.9749745428562164,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 95.0
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 901,
+      "sha256": "17a0590d814950414eb085c7d57e6354b1ff811aaa84d819f209b176996ecdac",
+      "label": 0,
+      "score": 0.9060673415660858,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 81.22
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 919,
+      "sha256": "0fd6fe587952b6f179229ae9cb32624799b709cb29d9c34ed85fc3a0971e0c6e",
+      "label": 0,
+      "score": 0.9107964336872101,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 83.32
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 98.84
+        }
+      ]
+    },
+    {
+      "row_index": 920,
+      "sha256": "0ae4a939fda61abaf9ab3a861d81c5332d419aabbccf371653409b556452e453",
+      "label": 0,
+      "score": 0.5070157251320779,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.41
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 956,
+      "sha256": "e61a33327a049acf91d4d1d9e5b42c69a1bd6b173af2f4a5d7adce51708b1655",
+      "label": 0,
+      "score": 0.0011299404104647692,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.22
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 991,
+      "sha256": "52c6247ef58e642e78a1737bacc72e347c45ffbbc22638e8c09ec86dad2ca3de",
+      "label": 1,
+      "score": 0.9964383542537689,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.3
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 1056,
+      "sha256": "42e9a48a7c8b7b5fb0aa7449aff73be53406d478afd7bf2364b40b014636791a",
+      "label": 1,
+      "score": 0.991769939661026,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.36
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1160,
+      "sha256": "2ed7e42d7ba69d6a5408431ebd7d2b210650fa6971e00e1e0262dcbc0babffb2",
+      "label": 0,
+      "score": 0.6633682399988174,
+      "duration_seconds": 1.001,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 32.68
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1193,
+      "sha256": "fed6255fd940d0c285902cc5510e1de8cfead6b94a518a36c282d09089afdbc3",
+      "label": 0,
+      "score": 0.8380745649337769,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 67.62
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1264,
+      "sha256": "45a5246dc0378bef95bfd9c567bd641196b3ea86f1b89f7753624de623e84f91",
+      "label": 0,
+      "score": 0.5088434787467122,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.77
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1329,
+      "sha256": "c34d035834ff76a1b0ead2e8689780f84f9133c7e82704e763a28124cad1011c",
+      "label": 0,
+      "score": 0.5011826321715489,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.24
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 1344,
+      "sha256": "b7b151a2a79e2b6a9df09294454b678fbad5bb65e49a2f03ef3c6fd5fa2a9875",
+      "label": 0,
+      "score": 0.50490000564605,
+      "duration_seconds": 0.124,
+      "speech_detected": false,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.98
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1365,
+      "sha256": "6ecbe93cde2d20d1d4c17a7bddf8846f7df2e2700609b6118dfc77ac75868dfa",
+      "label": 1,
+      "score": 0.020239253724867012,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 4.05
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1394,
+      "sha256": "67e1419dd7a6d9bd9ac0b8f770b2c15b12b48445ba950d007d21df5394632f92",
+      "label": 1,
+      "score": 0.5021346549037844,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.43
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1435,
+      "sha256": "59e107f872d5036b44d76591e0d656d5fb2039b18aba345118837d8bcbfa99fa",
+      "label": 1,
+      "score": 0.5178701803088188,
+      "duration_seconds": 1.54,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 3.58
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1509,
+      "sha256": "7bb63ca48d2ee7214449814addc6f34997977a1debedcd4d01b389ee22d7869f",
+      "label": 1,
+      "score": 0.9449988007545471,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 89.0
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1510,
+      "sha256": "e067f2b3347f923ea992126c4ece2fcb7ce456d4fb08d2a1c6d34758eb03e55b",
+      "label": 1,
+      "score": 0.5722837299108505,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 14.46
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1515,
+      "sha256": "da58b9c962df280458ae00306b07008036a6c39858a04acc1e978a2490db6755",
+      "label": 0,
+      "score": 0.5936052650213242,
+      "duration_seconds": 2.464,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 18.72
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1534,
+      "sha256": "68e01b0129ca9e0495fcc94f7760c8a11416a43acdff1f02581713a581824a43",
+      "label": 1,
+      "score": 0.014246740087401122,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 2.7
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.15
+        }
+      ]
+    },
+    {
+      "row_index": 1545,
+      "sha256": "e20095fae272535916bc09573568651d1ec89927b617a0f896153bd4fbb8a994",
+      "label": 1,
+      "score": 0.501082414877601,
+      "duration_seconds": 0.16,
+      "speech_detected": false,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.22
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 1556,
+      "sha256": "ee0be94acffedc516a6a8dbaa0fe400bc5ae875c6f455f7daebff435ef6168e7",
+      "label": 0,
+      "score": 0.005067685896392504,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.01
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1600,
+      "sha256": "8e5d5ef7d7a8d0b4033e14b37a9ac344226050b7f08ee1bcb7f6ea52a0460654",
+      "label": 0,
+      "score": 0.5405225344002247,
+      "duration_seconds": 1.226,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 8.19
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.91
+        }
+      ]
+    },
+    {
+      "row_index": 1642,
+      "sha256": "3409aa127cbe89df3783dcfb05e8bd83a3d19b870e0e0646967b7ed2634b2388",
+      "label": 0,
+      "score": 0.002480055458363495,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.49
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1650,
+      "sha256": "39748314f154c15e74a6c949203c9faad71a43e9151752b361a316fb87811fb9",
+      "label": 1,
+      "score": 0.9914363622665405,
+      "duration_seconds": 0.34,
+      "speech_detected": false,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.29
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1669,
+      "sha256": "7fdbedddbc022d2f5e10bd391b476e4e0cf77d138a33bcd6c63e4245d97a383a",
+      "label": 0,
+      "score": 0.0016068097902461886,
+      "duration_seconds": 0.331,
+      "speech_detected": false,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.19
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.13
+        }
+      ]
+    },
+    {
+      "row_index": 1712,
+      "sha256": "fcd195c0e3103db08a48ab81af07e7e4ac22cdffd419be82275317a8cf49ad1e",
+      "label": 0,
+      "score": 0.5009959397139028,
+      "duration_seconds": 0.537,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.2
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1750,
+      "sha256": "86b3196a71ecbf4bd03c693461af26526a3b558facb6b38bdd4638a55e48f50e",
+      "label": 1,
+      "score": 0.5476467125117779,
+      "duration_seconds": 0.48,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 9.53
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1755,
+      "sha256": "efcd36341309b11ca8f77a8f644bd05a6e5f12832d897414ff938c302fccc786",
+      "label": 1,
+      "score": 0.02666884882000886,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 5.33
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1814,
+      "sha256": "25775716442262a40efc57b30494efa8996d0b0964fb8580595f410da726c5b3",
+      "label": 0,
+      "score": 0.44358108488086145,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 88.71
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.01
+        }
+      ]
+    },
+    {
+      "row_index": 1817,
+      "sha256": "0645f0b7f8a149b92a885008caa328bcd7eb3adc2a4fb577ec7743a55e0690c3",
+      "label": 1,
+      "score": 0.04657961821976642,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 9.31
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1845,
+      "sha256": "8d58fb59badfbaafc80d4599dd483971deb5a2fdfe989dbdf5ebdc42fa72b08b",
+      "label": 0,
+      "score": 0.001196493975839985,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.24
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1861,
+      "sha256": "fec8eee215e711be01f44477ba36e0cbe2094410db6762aa23ad02b69aea829b",
+      "label": 1,
+      "score": 0.9958162307739258,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.17
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1897,
+      "sha256": "4b7d12ee118c06471318db226c8b1f1372e3a487f3e5439733b60e8d2146e2b3",
+      "label": 1,
+      "score": 0.9967128038406372,
+      "duration_seconds": 0.78,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.35
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1902,
+      "sha256": "59db636bfb683e13978697f2da6dc42c59804d649cea53808f2b791360202c8c",
+      "label": 0,
+      "score": 0.6251003295183182,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 25.04
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.98
+        }
+      ]
+    },
+    {
+      "row_index": 1922,
+      "sha256": "ea5b61e5b2d96ec9a67a063b034185496ac912b2b96d49be3ff418aa6d561710",
+      "label": 0,
+      "score": 0.5821632519364357,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 16.44
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 1979,
+      "sha256": "f47829df962231e680d0d8887ace3203b8d8977c95d3ab4d7334d02c611f6d22",
+      "label": 1,
+      "score": 0.03778554366908793,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 7.56
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1980,
+      "sha256": "eadfd597de6ec9f0aa40aa293f9bce99c95d1c8ec5b8cc1c2c76d5e38825b245",
+      "label": 1,
+      "score": 0.47774741957346123,
+      "duration_seconds": 2.36,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 95.55
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 1995,
+      "sha256": "bf6e1b5e1aba77b63c3dc65d9ae4fb6352a3e8b19117edceee821d8e04098740",
+      "label": 1,
+      "score": 0.996943861246109,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.39
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2060,
+      "sha256": "100247f17fdecc1ea9a17f0e9ec3c33bda46c978c9c04522a709723a4e176b1e",
+      "label": 1,
+      "score": 0.9535084664821625,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 90.7
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2064,
+      "sha256": "44abb8f35b7209816a35f04a181495a06623d992e164e3edb372e370df8720f0",
+      "label": 0,
+      "score": 0.5061126006767154,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.23
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2092,
+      "sha256": "35a934b64e6a7ee9d29826794947a8f2415ee361adabf2f29aaaf01824363521",
+      "label": 0,
+      "score": 0.5003226649714634,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.36
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.71
+        }
+      ]
+    },
+    {
+      "row_index": 2110,
+      "sha256": "6f5d798f6ae2a894eddbffe9f1713770c25da81089e90d420c8fadc913f5c688",
+      "label": 1,
+      "score": 0.9963769316673279,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.28
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 2123,
+      "sha256": "256ad608971186fa7fac7eccc88638f739ceab0f391d9924d1ccb9fce6110c65",
+      "label": 0,
+      "score": 0.002300303041920415,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.46
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2138,
+      "sha256": "236635c8fcd5c3621d960e872a450e0f50fc87bc46c981fe6889ad8e4139c591",
+      "label": 0,
+      "score": 0.033684666434055544,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 6.73
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2170,
+      "sha256": "b55b6d59ec7dfd0bf90724860b40298f9025a6e2e1a74f502534ab548c5bb742",
+      "label": 0,
+      "score": 0.5030396706424654,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.62
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 2217,
+      "sha256": "d28581c771be4b87f7504507eef4af9e3762a10adb7a1cdec82e22e7a4bee9bf",
+      "label": 1,
+      "score": 0.9914052784442902,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.28
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2223,
+      "sha256": "2ec3561d8849f35565516fd7d4f55b57f76edc0053c8658c4dd2d09383a536e7",
+      "label": 0,
+      "score": 0.006880883231133339,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.37
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2238,
+      "sha256": "7b61c95abde992873b8233d9dffd1fd5de55a216d99ba7afc8a14d57c40de663",
+      "label": 0,
+      "score": 0.9973096251487732,
+      "duration_seconds": 0.29,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.46
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2239,
+      "sha256": "b70daeb40466ce28f0c93fdb8c30b0bbd64d7726fab89292de02655a592ba6db",
+      "label": 1,
+      "score": 0.9956189692020416,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.13
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2267,
+      "sha256": "7c0c8fff7b596dd5a6b3647a19d577d35d123e9714a5e799c5c5a269ca52c77a",
+      "label": 0,
+      "score": 0.5158346556127071,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 3.17
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2278,
+      "sha256": "030ec15ec9c12ed9541c6a546c90ee3da677a52a0be31ce0bb988d881114188a",
+      "label": 1,
+      "score": 0.9952391088008881,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.05
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2347,
+      "sha256": "b7b63eb5ffec69dbabb27e1c4397f27b44852d20c0d7f130716afa37ae3e5ebd",
+      "label": 1,
+      "score": 0.9967449307441711,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.35
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2393,
+      "sha256": "b9fe291d7ea603fbe8141983a2be5cb49a2cb091133b2f56a3e5b4e882d5b93f",
+      "label": 1,
+      "score": 0.5183596704155207,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 3.67
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2403,
+      "sha256": "75a9c44819aadb34f92c46bce62b99e10d33959e1546defdd0ee5e55abb0f928",
+      "label": 1,
+      "score": 0.9960729777812958,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.22
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2435,
+      "sha256": "ce1c0a2375279d34659b49c080e3a197cd8b87d7911d0561edfdddc85b705a41",
+      "label": 0,
+      "score": 0.5007063839002512,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.14
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2442,
+      "sha256": "4fbc83ed23b0a6abfef444dbfe6d71aa058d4034c708b9c8f12add8fcf9de3f3",
+      "label": 1,
+      "score": 0.9951458871364594,
+      "duration_seconds": 2.1,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.03
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2501,
+      "sha256": "78cdfed9388ccc4c9ec6dd5b63d9400f5330e3e4f4d37e3de1962e1b681c10cc",
+      "label": 0,
+      "score": 0.9813208878040314,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 96.27
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2550,
+      "sha256": "b6d4c8e8607d5022104d0266e92c37cfb1f5bd0dac891067c58b24271ab95b0c",
+      "label": 1,
+      "score": 0.4029523497401897,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 80.59
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2572,
+      "sha256": "38f07e25932d919560abe224ee5e8e48fd3e3888be2875f8dddbdf277c26f59a",
+      "label": 0,
+      "score": 0.9925279915332794,
+      "duration_seconds": 2.293,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.52
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 2643,
+      "sha256": "bef048134e037a6e62c8f8fb39494e051743d817ef00cb4763ed75d168c89aaa",
+      "label": 0,
+      "score": 0.5740816295146942,
+      "duration_seconds": 2.56,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 14.84
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.98
+        }
+      ]
+    },
+    {
+      "row_index": 2650,
+      "sha256": "e59df7ad13fcdad1ef7e7635de6b5d0f3bd90f23d9820ea1410896f5a658c51e",
+      "label": 1,
+      "score": 0.4903916734156155,
+      "duration_seconds": 0.34,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.08
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2691,
+      "sha256": "fd665052663af0c92f9012cb47bf60b6f5563a4838682b7a4c9cf00841be2b4d",
+      "label": 1,
+      "score": 0.6578630208969116,
+      "duration_seconds": 1.28,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 31.58
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 2700,
+      "sha256": "777948236a450e0b352b7b4f5bf810949eb3d1e1b30577fb295371b36dff4489",
+      "label": 0,
+      "score": 0.687414288520813,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 37.49
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2719,
+      "sha256": "b1e104a11a81b55b77810b66325d36625f6243ca477469f012320db8408483dc",
+      "label": 0,
+      "score": 0.5009143628412858,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.19
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2720,
+      "sha256": "a84b20fc4599efc90e6543fe2638170357fb9d5b79cfd4fd504f0cf9d3482f01",
+      "label": 1,
+      "score": 0.9915283024311066,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.31
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2736,
+      "sha256": "1694a8c4edd8c585e435cfaac9aa03c82399eb527c2207da5aa734ca3e5abbe4",
+      "label": 0,
+      "score": 0.5183814335614443,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 3.68
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2738,
+      "sha256": "ac7582fd3e149cef94b19e97945b5cc61fde3301e376a37cf7a60a9013c890d6",
+      "label": 1,
+      "score": 0.0030638030548288953,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.61
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2740,
+      "sha256": "26d06d01bfb9dcdff02311bb0583864a9b39905613b4a3aeafa8b5325ece5d3a",
+      "label": 1,
+      "score": 0.24565058635653259,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 49.13
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2792,
+      "sha256": "3224d536f6275fed6f2b62e4b769013031cda9d27444a9e1ab2a0fdca4ff2b5c",
+      "label": 1,
+      "score": 0.000986170802207198,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.2
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2811,
+      "sha256": "232e5073368d5a5d7cf74a3e6b6adf0b57572738e677b17842a650d18d629646",
+      "label": 0,
+      "score": 0.011751388752600178,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 2.33
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.02
+        }
+      ]
+    },
+    {
+      "row_index": 2815,
+      "sha256": "1bf75373de091c8d92c925b181300dc30ae587c0e8598e19a46d6f0c91fff072",
+      "label": 0,
+      "score": 0.5095055727288127,
+      "duration_seconds": 1.326,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.91
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 2825,
+      "sha256": "6ad62c00a737235165d619674ba2a4bae1c58eac723db2e997c9c445bb0dbc0f",
+      "label": 1,
+      "score": 0.991963803768158,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.4
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2847,
+      "sha256": "8a43a5e465236804fdc2d4b523d1d067a5350d08cac6d81a0fa717b8159dba69",
+      "label": 0,
+      "score": 0.8992186188697815,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 79.85
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 2868,
+      "sha256": "adffb69bc838aed97ce09cfc59b84952963f91dbfaf246657d5f0a537ca87de4",
+      "label": 0,
+      "score": 0.9892516136169434,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.17
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.68
+        }
+      ]
+    },
+    {
+      "row_index": 2877,
+      "sha256": "2c274d77ac174a31d0a926d446b098ce20550ca099e9e338ca2e4d6218685969",
+      "label": 1,
+      "score": 0.010745126486654044,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 2.15
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2909,
+      "sha256": "c547a485495e165b21af4f3edbe73ffce4c7a7cfcc024d5feac5f7d16143a805",
+      "label": 0,
+      "score": 0.001001106054900447,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.2
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2959,
+      "sha256": "46ef831c1c796dc4d1df347957c8f5c2c244ff1125be09baa5f91b31c3ec23e1",
+      "label": 1,
+      "score": 0.03953159508000681,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 7.9
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2965,
+      "sha256": "32eedba3a3edd97ec37be49b6cc5045d28908deba8d4f5f11ce1c6cdb308a509",
+      "label": 0,
+      "score": 0.503294657683,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.66
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 2988,
+      "sha256": "1b5bcff2ea77cdf576f68dd730e74d0fb472c7c89a6a8acb65ec19a75426c84b",
+      "label": 0,
+      "score": 0.502963551087305,
+      "duration_seconds": 1.972,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.6
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 3124,
+      "sha256": "c7cb4d6551933cd73b2dd7865043cd05533fb8cff12656613b886d0d34da2c82",
+      "label": 1,
+      "score": 0.9898258745670319,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.07
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.9
+        }
+      ]
+    },
+    {
+      "row_index": 3168,
+      "sha256": "23b6bfca390008cf57598213b22c4925bb7e480204eb9ff263d4c209a23e0044",
+      "label": 1,
+      "score": 0.9957503378391266,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 99.15
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 3227,
+      "sha256": "8645949276bc4738cdfbcf47bb611061cf120713689d70f46b12e8fbfbbc2771",
+      "label": 0,
+      "score": 0.6885967254638672,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 37.72
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 3274,
+      "sha256": "6d1a97c2e4d54c4f1ea08529063eae3b36bd6d9e3d58206848130d80e3ca29f5",
+      "label": 0,
+      "score": 0.9243532717227936,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 84.88
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 3276,
+      "sha256": "3f7dd618516a986e634767c775ee7debc9d17f575dd3e51c4d50321c33f81c87",
+      "label": 1,
+      "score": 0.9931711852550507,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.64
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 3307,
+      "sha256": "17901dc03f34932b5cb018144971e98f2a9faf6aebfa62f8df830a763cb1ad2a",
+      "label": 1,
+      "score": 0.5139650031924248,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 2.8
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 3313,
+      "sha256": "c4a6983571a15bfc863f93cd1353b35eb8d7c8a8db2d0e6a224dbfa9ce3ad80a",
+      "label": 1,
+      "score": 0.0010766338573375833,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.21
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3332,
+      "sha256": "b82dbeaf1746d88b882599292b81eaec94d9eca8f6208154ad334c05e47874f5",
+      "label": 0,
+      "score": 0.9752324521541595,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 95.05
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 3347,
+      "sha256": "33cbce75378a540505689facca6d33fe034ceb83dabe5092926660db43a7e82c",
+      "label": 1,
+      "score": 0.0018910695016529644,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.38
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3404,
+      "sha256": "6576b283ca19b591694baba91ebd1ac7934b9ac16cb79ea335adeec53ab652e2",
+      "label": 1,
+      "score": 0.20948669363315275,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 41.9
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3451,
+      "sha256": "0e01095ce8f8ff57f1398d99da1ec20608793e2386093554fa07952a6b68e433",
+      "label": 0,
+      "score": 0.009017192758619785,
+      "duration_seconds": 0.404,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.61
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.2
+        }
+      ]
+    },
+    {
+      "row_index": 3455,
+      "sha256": "14b635c659f76a5c9d8a5167d9183eab9806104e7e80f3c8a4579a16f2b88577",
+      "label": 1,
+      "score": 0.7210274636745453,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 48.99
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 95.22
+        }
+      ]
+    },
+    {
+      "row_index": 3497,
+      "sha256": "ece0d97240100a7ef22c3a132a8e10e94659a7ca37ea9d17447fdc29761de63a",
+      "label": 1,
+      "score": 0.00750277538827504,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 1.5
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3533,
+      "sha256": "c2fb4a548abade2a68b0e04887c64ed1e70baa311d90b7b3d90c6870fc19aaf1",
+      "label": 1,
+      "score": 0.851557731628418,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 70.31
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 3539,
+      "sha256": "9867a7b13f2679f1d86f18a91b21a6bb5a57c4f9340eb3bf286ffde6e6708ae2",
+      "label": 0,
+      "score": 0.7911090850830078,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 58.27
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.96
+        }
+      ]
+    },
+    {
+      "row_index": 3579,
+      "sha256": "34e2d2bd4d44b39608b6658ace45d91b02b4b321e65747278097ae25585144a5",
+      "label": 0,
+      "score": 0.7123408913612366,
+      "duration_seconds": 0.513,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 42.47
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 3591,
+      "sha256": "27b8d9d5856f0f3c1b703fa55042b893cc82f17a33e8269b54e2fbf267702805",
+      "label": 1,
+      "score": 0.19226447894379817,
+      "duration_seconds": 1.6,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 38.45
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3641,
+      "sha256": "e8d82171f42983013e63556a17ba5674113140fa86884cc6c3bb9e0928b7855d",
+      "label": 1,
+      "score": 0.04648374868702376,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 9.3
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3674,
+      "sha256": "399c073a858477935b102f6e349e2ce6ea01fd87d5f1d633308ddc0fd6f97b2c",
+      "label": 0,
+      "score": 0.5010679464321584,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.22
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 3720,
+      "sha256": "81820fd3689997ac853a4d4969692a9082d3c4783cf547a5009526b6799ab329",
+      "label": 0,
+      "score": 0.0010803563200170174,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.21
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3777,
+      "sha256": "bd925cbf07f2b390c3b061ae60b62c3c8d109c3db444734780d7f0aa7c1785c4",
+      "label": 0,
+      "score": 0.5020714185666293,
+      "duration_seconds": 0.552,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.42
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 100.0
+        }
+      ]
+    },
+    {
+      "row_index": 3784,
+      "sha256": "1d6ff3c3a3f7e5e3764b2974efdd53e7a0d053372d6706bf5d8e3da454033c70",
+      "label": 0,
+      "score": 0.0008866056286933599,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.18
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3815,
+      "sha256": "2bef1f6c447868b78c3493be32ebced7f928eaf593f3a8243e9c094ed2b6b304",
+      "label": 1,
+      "score": 0.5040619014762342,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 0.82
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 3841,
+      "sha256": "eba5af86baab97604e4a866bc27d7253f7bfaf219154c5e244601af64fd7374a",
+      "label": 0,
+      "score": 0.5826829001307487,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": true,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 16.55
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 3848,
+      "sha256": "7b9b0b129e0612d54c47ec3af4c6defd275d7943982975da57ac4c33b873f097",
+      "label": 1,
+      "score": 0.992319643497467,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 98.47
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 99.99
+        }
+      ]
+    },
+    {
+      "row_index": 3880,
+      "sha256": "ce018c324de5e3a8441b38bf2545534c5801c8db7b01888686f83af90b2a1393",
+      "label": 1,
+      "score": 0.020380356992973248,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "model_disagreement": false,
+      "model_scores_percent": [
+        {
+          "id": "garystafford/wav2vec2-deepfake-voice-detector",
+          "revision": "c66306024a7ede0be291e9c4558b37634782dc4e",
+          "fake_score": 4.07
+        },
+        {
+          "id": "mo-thecreator/Deepfake-audio-detection",
+          "revision": "e4d9874b493362149cec96ced85f00b00b1a04c0",
+          "fake_score": 0.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+name: Tests and security
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install --upgrade pip setuptools
+      - run: pip install torch==2.14.1+cpu --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r requirements-dev.txt
+      - run: pip check
+      - run: python -m pytest -q
+      - run: bandit -r app.py voiceguard evaluate.py robustness.py train_arabic.py public_arabic_benchmark.py compare_arabic_models.py train_public_head.py calibrate_public_arabic.py physical_loudspeaker_test.py train_channel_head.py -ll
+      - run: pip-audit --progress-spinner off
+      - run: pip-audit -r requirements.txt --disable-pip --no-deps --progress-spinner off
+  container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t voiceguard:test .
+      - run: test "$(docker inspect -f '{{.Config.User}}' voiceguard:test)" = voiceguard

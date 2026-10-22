@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reaper AI | Deepfake Detection</title>
+<link rel="icon" href="/new-end.webp" type="image/webp">
+<link rel="preload" href="/font.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/enhancements.css">
+<script src="/script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#analysis" data-i18n="skip">Skip to content</a>
+<header class="navbar">
+    <a href="index.html" class="logo" aria-label="Reaper AI Home">
+      <img
+        src="./new-end.webp"
+        alt="Reaper AI Logo"
+        class="logo-image"
+      />
+      <div class="logo-text">
+        <strong>REAPER <span>AI</span></strong>
+        <small>AI VOICE SECURITY</small>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+<main class="dashboard">
+<section class="hero">
+      <div class="eyebrow">AI VOICE SECURITY SYSTEM</div>
+      <h1>TRUST THE <span>VOICE?</span></h1>
+      <p>Advanced AI-powered voice cloning detection.</p>
+    </section>
+<div class="analysis-tools" id="analysis" lang="en" dir="ltr">
+<section class="panel" aria-labelledby="uploadTitle"><div class="section-heading"><h2 id="uploadTitle" data-i18n="uploadTitle">VOICE ANALYSIS</h2><button id="language" type="button" lang="ar">العربية</button></div><p id="health" role="status" data-i18n="connecting">Checking detector readiness…</p><p data-i18n="privacy">Audio is processed in memory and is not retained by this application. Upload only recordings you own or have permission to analyze.</p>
+<div id="drop" class="upload-box drop"><div class="upload-icon" aria-hidden="true">♫</div><label for="file" data-i18n="choose">Choose audio or drop it here</label><input id="file" type="file" accept=".wav,.mp3,.flac,.ogg,.m4a,.webm,audio/*"><p id="limits">WAV · MP3 · FLAC · OGG · M4A · WebM</p></div>
+<div class="actions"><button id="record" type="button" data-i18n="record">Record microphone</button><button id="stop" type="button" disabled data-i18n="stop">Stop recording</button></div><p id="selected" role="status" data-i18n="noFile">No recording selected.</p><audio id="player" controls hidden></audio>
+<div class="analysis-options">
+<label class="consent"><input type="checkbox" id="consent"><span data-i18n="consent">I have permission and consent to processing this recording.</span></label>
+<label class="consent"><input type="checkbox" id="explain"><span data-i18n="explain">Include slower muting analysis (recordings up to 30 seconds)</span></label>
+</div>
+<button id="analyze" class="primary" type="button" disabled data-i18n="analyze">Analyze recording</button><progress id="progress" hidden aria-label="Upload progress" max="100"></progress><p id="status" role="status" aria-live="polite"></p></section>
+<section id="results" class="results panel" aria-labelledby="resultTitle">
+<div class="section-heading"><h2 id="resultTitle" data-i18n="resultTitle">DETECTION RESULTS</h2><span class="badge">LIVE DASHBOARD</span></div>
+<div class="result-grid">
+<div class="gauge-card"><div class="gauge"><canvas id="scoreGauge" width="190" height="190" aria-hidden="true"></canvas><div class="gauge-inner"><strong id="score">--%</strong><span data-i18n="aiConfidence">AI CONFIDENCE</span></div></div><p class="muted" data-i18n="modelConfidence">Model confidence score</p></div>
+<div class="verdict-card" role="status" aria-live="polite" aria-atomic="true"><div class="signal" aria-hidden="true">●</div><p class="muted" data-i18n="modelPrediction">THREAT ASSESSMENT</p><h2 id="verdict">AWAITING ANALYSIS</h2><p id="reason">Upload audio to receive a detection result.</p><div class="meter"><canvas id="scoreMeter" width="600" height="7" aria-hidden="true"></canvas></div><div class="meter-labels"><span data-i18n="low">LOW</span><span data-i18n="medium">MEDIUM</span><span data-i18n="high">HIGH</span></div></div>
+</div>
+<div id="reportDetails" hidden><p data-i18n="scoreNote">The real/fake label is the model’s prediction, not proof of authenticity or fraud. Scores are not a probability of fraud.</p>
+<h3 id="timelineHeading" data-i18n="timelineTitle">Window timeline</h3><p data-i18n="timelineNote">Overlapping 5-second windows. Higher fake-class scores appear brighter; a highlighted region is not proof of manipulation.</p><canvas id="timeline" width="1000" height="120" role="img" aria-label="Fake-class score by audio window"></canvas><div class="table-wrap" tabindex="0" role="region" aria-labelledby="timelineHeading"><table><caption data-i18n="tableTitle">Accessible timeline data</caption><thead><tr><th data-i18n="start">Start (s)</th><th data-i18n="end">End (s)</th><th data-i18n="fakeScore">Fake-class score</th><th data-i18n="impact">Score change when muted (percentage points)</th></tr></thead><tbody id="segments"></tbody></table></div><p data-i18n="impactNote">Positive values mean muting lowered the fake-class score; negative values mean it raised it. A dash means this optional check was not run.</p>
+<h3 data-i18n="spectrumTitle">Spectrogram and window overlay</h3><canvas id="spectrum" width="1000" height="260" role="img" aria-label="Spectrogram: time horizontally, frequency vertically, brighter colors indicate energy"></canvas><p data-i18n="spectrumNote">0–8 kHz, bottom to top; time runs left to right. Muting analysis replaces each selected interval with silence and recomputes overlapping windows. Its score change is a sensitivity check, not a causal explanation.</p><button id="download" type="button" data-i18n="download">Download JSON report</button><p id="disclaimer"></p></div></section>
+<section class="panel advice"><h2 data-i18n="adviceTitle">Suspicious call? Pause before acting.</h2><ol><li data-i18n="advice1">Call back using a number you already trust, not one supplied by the caller.</li><li data-i18n="advice2">Agree on a private family verification phrase.</li><li data-i18n="advice3">Never transfer money or share a code based only on a voice call.</li></ol><p data-i18n="research">Research focus: how reliable are open voice deepfake detectors on Arabic speech and compressed or noisy messaging audio?</p></section>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="footer-container">
+
+
+      <div class="footer-column" id="about">
+        <h3>About Us</h3>
+        <p>
+          We are <strong>Reaper Team</strong> — IT students passionate about technology,
+          innovation, and building real-world projects. We collaborate, learn,
+          and grow together across 5 universities.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#results">Live Dashboard</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-column" id="contact">
+        <h3>Contact Us</h3>
+        <p>
+          Get in touch with Reaper Team for questions,
+          suggestions, or collaboration opportunities.
+        </p>
+        <p class="team-subtext">IT Students · 5 Universities</p>
+        <a href="https://www.instagram.com/reaperteamm?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==" target="_blank" class="team-link">
+          Visit Our Team Page →
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-policy">
+          <span>AI Voice Security</span>
+          <span>•</span>
+          <span>Deepfake Detection</span>
+        </div>
+        <div class="footer-copyright">
+          Reaper Team &nbsp;|&nbsp; Copyright © 2026
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

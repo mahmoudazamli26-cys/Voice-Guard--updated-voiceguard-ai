@@ -1,0 +1,1945 @@
+{
+  "status": "exploratory_only",
+  "dataset": "DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "revision": "9dbe1c09acc5907741dcd8c64d7a1d092ff1886d",
+  "source_url": "https://huggingface.co/datasets/DeepFake-Audio-Rangers/Arabic_Audio_Deepfake",
+  "attribution": "ArAD dataset, DeepFake-Audio-Rangers; see dataset card at pinned revision.",
+  "stated_license": "ODC-By-1.0",
+  "source_file": "data/test-00000-of-00001.parquet",
+  "source_sha256": "ecf0ea125501a7f64f00aaf1200de5cd96959065337321c3b21dcf126b68febe",
+  "split": "publisher test subset",
+  "seed": 20261020,
+  "duplicates_removed_before_sampling": 0,
+  "limitations": [
+    "Exploratory balanced subset of the publisher test partition, not a full benchmark.",
+    "Speaker IDs and individual consent records are absent from the dataset card.",
+    "Speaker independence, duplicate utterance independence and model training overlap are unverified.",
+    "Publisher labels are used without independent authenticity verification.",
+    "Mostly Levantine Arabic, RVC generation and short cleaned clips limit generalization.",
+    "No calibration, fine-tuning, physical re-recording or production threshold changes.",
+    "Classifier metrics precede the API speech gate; gate rejection counts are reported separately."
+  ],
+  "identity": {
+    "models": [
+      {
+        "id": "garystafford/wav2vec2-deepfake-voice-detector",
+        "revision": "c66306024a7ede0be291e9c4558b37634782dc4e"
+      }
+    ],
+    "window_seconds": 5,
+    "stride_seconds": 2.5,
+    "aggregation": "mean"
+  },
+  "metrics": {
+    "count": 128,
+    "real_count": 64,
+    "fake_count": 64,
+    "diagnostic_threshold": 0.5,
+    "accuracy": 0.625,
+    "precision": 0.6904761904761905,
+    "recall": 0.453125,
+    "f1": 0.5471698113207547,
+    "confusion_matrix_real_fake": [
+      [
+        51,
+        13
+      ],
+      [
+        35,
+        29
+      ]
+    ],
+    "roc_auc": 0.674072265625,
+    "eer_interpolated": 0.4375,
+    "roc": {
+      "fpr": [
+        0.0,
+        0.015625,
+        0.015625,
+        0.03125,
+        0.03125,
+        0.046875,
+        0.046875,
+        0.0625,
+        0.0625,
+        0.078125,
+        0.078125,
+        0.09375,
+        0.09375,
+        0.15625,
+        0.15625,
+        0.171875,
+        0.171875,
+        0.203125,
+        0.203125,
+        0.21875,
+        0.21875,
+        0.234375,
+        0.234375,
+        0.25,
+        0.25,
+        0.296875,
+        0.296875,
+        0.40625,
+        0.40625,
+        0.4375,
+        0.4375,
+        0.453125,
+        0.453125,
+        0.484375,
+        0.484375,
+        0.5,
+        0.5,
+        0.515625,
+        0.515625,
+        0.53125,
+        0.53125,
+        0.546875,
+        0.546875,
+        0.5625,
+        0.5625,
+        0.609375,
+        0.609375,
+        0.6875,
+        0.6875,
+        0.734375,
+        0.734375,
+        0.75,
+        0.75,
+        0.78125,
+        0.78125,
+        0.796875,
+        0.796875,
+        0.859375,
+        0.859375,
+        0.890625,
+        0.890625,
+        0.921875,
+        0.921875,
+        0.96875,
+        0.96875,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.0,
+        0.1875,
+        0.1875,
+        0.3125,
+        0.3125,
+        0.34375,
+        0.34375,
+        0.359375,
+        0.359375,
+        0.375,
+        0.375,
+        0.40625,
+        0.40625,
+        0.421875,
+        0.421875,
+        0.453125,
+        0.453125,
+        0.484375,
+        0.484375,
+        0.5,
+        0.5,
+        0.515625,
+        0.515625,
+        0.53125,
+        0.53125,
+        0.546875,
+        0.546875,
+        0.5625,
+        0.5625,
+        0.609375,
+        0.609375,
+        0.65625,
+        0.65625,
+        0.703125,
+        0.703125,
+        0.734375,
+        0.734375,
+        0.75,
+        0.75,
+        0.765625,
+        0.765625,
+        0.796875,
+        0.796875,
+        0.8125,
+        0.8125,
+        0.828125,
+        0.828125,
+        0.84375,
+        0.84375,
+        0.859375,
+        0.859375,
+        0.875,
+        0.875,
+        0.890625,
+        0.890625,
+        0.90625,
+        0.90625,
+        0.921875,
+        0.921875,
+        0.953125,
+        0.953125,
+        0.96875,
+        0.96875,
+        1.0,
+        1.0
+      ],
+      "thresholds": [
+        null,
+        0.9946448802947998,
+        0.9863681197166443,
+        0.9851543307304382,
+        0.9822023510932922,
+        0.9816905856132507,
+        0.9806698560714722,
+        0.9626690745353699,
+        0.9554764032363892,
+        0.9505015015602112,
+        0.9499745965003967,
+        0.949266254901886,
+        0.8900320529937744,
+        0.8121625781059265,
+        0.8058773875236511,
+        0.798495888710022,
+        0.7031412124633789,
+        0.582655131816864,
+        0.48990052938461304,
+        0.47404053807258606,
+        0.46384671330451965,
+        0.4247077703475952,
+        0.41895782947540283,
+        0.40246832370758057,
+        0.3845115602016449,
+        0.32676199078559875,
+        0.31578564643859863,
+        0.14835608005523682,
+        0.14459964632987976,
+        0.11340998858213425,
+        0.09295198321342468,
+        0.08191845566034317,
+        0.07555045187473297,
+        0.06638579815626144,
+        0.04992124065756798,
+        0.04616645351052284,
+        0.04046287015080452,
+        0.036791715770959854,
+        0.03674544766545296,
+        0.03671908751130104,
+        0.035778746008872986,
+        0.031696490943431854,
+        0.02700989693403244,
+        0.023301079869270325,
+        0.021474689245224,
+        0.016077926382422447,
+        0.014990022405982018,
+        0.009844476357102394,
+        0.00817947369068861,
+        0.006173635832965374,
+        0.00611148402094841,
+        0.0060006543062627316,
+        0.00582896638661623,
+        0.004575936123728752,
+        0.004303999710828066,
+        0.004170016851276159,
+        0.003756826976314187,
+        0.0022376517299562693,
+        0.002228368306532502,
+        0.002142839366570115,
+        0.0020964464638382196,
+        0.001986639341339469,
+        0.0019563091918826103,
+        0.0017566853202879429,
+        0.001569582731463015,
+        0.0014398283092305064
+      ]
+    }
+  },
+  "speech_gate_rejections": {
+    "real": 3,
+    "fake": 2
+  },
+  "robustness": {
+    "original": {
+      "metrics": {
+        "count": 32,
+        "real_count": 16,
+        "fake_count": 16,
+        "diagnostic_threshold": 0.5,
+        "accuracy": 0.59375,
+        "precision": 0.6666666666666666,
+        "recall": 0.375,
+        "f1": 0.48,
+        "confusion_matrix_real_fake": [
+          [
+            13,
+            3
+          ],
+          [
+            10,
+            6
+          ]
+        ],
+        "roc_auc": 0.53125,
+        "eer_interpolated": 0.5625,
+        "roc": {
+          "fpr": [
+            0.0,
+            0.0,
+            0.0,
+            0.1875,
+            0.1875,
+            0.25,
+            0.25,
+            0.5625,
+            0.5625,
+            0.625,
+            0.625,
+            0.6875,
+            0.6875,
+            0.875,
+            0.875,
+            0.9375,
+            0.9375,
+            1.0
+          ],
+          "tpr": [
+            0.0,
+            0.0625,
+            0.3125,
+            0.3125,
+            0.375,
+            0.375,
+            0.4375,
+            0.4375,
+            0.5,
+            0.5,
+            0.625,
+            0.625,
+            0.6875,
+            0.6875,
+            0.8125,
+            0.8125,
+            1.0,
+            1.0
+          ],
+          "thresholds": [
+            null,
+            0.9929705262184143,
+            0.9499745965003967,
+            0.8121625781059265,
+            0.7979280352592468,
+            0.47404053807258606,
+            0.46384671330451965,
+            0.11340998858213425,
+            0.0786811038851738,
+            0.06638579815626144,
+            0.04992124065756798,
+            0.04616645351052284,
+            0.04046287015080452,
+            0.006834142375737429,
+            0.004303999710828066,
+            0.0022376517299562693,
+            0.001569582731463015,
+            0.0015336937503889203
+          ]
+        }
+      },
+      "mean_absolute_score_change": 0.0,
+      "mean_signed_score_change": 0.0
+    },
+    "resampled_8khz": {
+      "metrics": {
+        "count": 32,
+        "real_count": 16,
+        "fake_count": 16,
+        "diagnostic_threshold": 0.5,
+        "accuracy": 0.5625,
+        "precision": 0.5625,
+        "recall": 0.5625,
+        "f1": 0.5625,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            7
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "roc_auc": 0.59375,
+        "eer_interpolated": 0.4375,
+        "roc": {
+          "fpr": [
+            0.0,
+            0.0,
+            0.0,
+            0.25,
+            0.25,
+            0.3125,
+            0.3125,
+            0.5625,
+            0.5625,
+            0.6875,
+            0.6875,
+            0.875,
+            0.875,
+            0.9375,
+            0.9375,
+            1.0
+          ],
+          "tpr": [
+            0.0,
+            0.0625,
+            0.375,
+            0.375,
+            0.4375,
+            0.4375,
+            0.5625,
+            0.5625,
+            0.625,
+            0.625,
+            0.75,
+            0.75,
+            0.8125,
+            0.8125,
+            1.0,
+            1.0
+          ],
+          "thresholds": [
+            null,
+            0.9945759773254395,
+            0.978293240070343,
+            0.9117467403411865,
+            0.8313417434692383,
+            0.8203281164169312,
+            0.7114893198013306,
+            0.1519700139760971,
+            0.13852255046367645,
+            0.051689669489860535,
+            0.045313552021980286,
+            0.017172008752822876,
+            0.014491153880953789,
+            0.0025451728142797947,
+            0.001705213449895382,
+            0.0014601113507524133
+          ]
+        }
+      },
+      "mean_absolute_score_change": 0.16167547018267214,
+      "mean_signed_score_change": 0.1232197890203679
+    },
+    "noise_20db": {
+      "metrics": {
+        "count": 32,
+        "real_count": 16,
+        "fake_count": 16,
+        "diagnostic_threshold": 0.5,
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix_real_fake": [
+          [
+            16,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "roc_auc": 0.26171875,
+        "eer_interpolated": 0.6875,
+        "roc": {
+          "fpr": [
+            0.0,
+            0.0625,
+            0.3125,
+            0.3125,
+            0.375,
+            0.375,
+            0.4375,
+            0.4375,
+            0.6875,
+            0.6875,
+            0.8125,
+            0.8125,
+            0.875,
+            0.875,
+            0.9375,
+            0.9375,
+            1.0,
+            1.0
+          ],
+          "tpr": [
+            0.0,
+            0.0,
+            0.0,
+            0.0625,
+            0.0625,
+            0.25,
+            0.25,
+            0.3125,
+            0.3125,
+            0.375,
+            0.375,
+            0.4375,
+            0.4375,
+            0.5,
+            0.5,
+            0.9375,
+            0.9375,
+            1.0
+          ],
+          "thresholds": [
+            null,
+            0.026045989245176315,
+            0.0030116417910903692,
+            0.002897458616644144,
+            0.0025873836129903793,
+            0.002208267105743289,
+            0.0020945759024471045,
+            0.0020483562257140875,
+            0.0018486266490072012,
+            0.00178115488961339,
+            0.0017354658339172602,
+            0.0016713151708245277,
+            0.0016328721540048718,
+            0.0016109455609694123,
+            0.0015735982451587915,
+            0.0014290034305304289,
+            0.0013889807742089033,
+            0.001299381721764803
+          ]
+        }
+      },
+      "mean_absolute_score_change": 0.33479589545095223,
+      "mean_signed_score_change": -0.33477362696794444
+    },
+    "noise_10db": {
+      "metrics": {
+        "count": 32,
+        "real_count": 16,
+        "fake_count": 16,
+        "diagnostic_threshold": 0.5,
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix_real_fake": [
+          [
+            16,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "roc_auc": 0.21484375,
+        "eer_interpolated": 0.6875,
+        "roc": {
+          "fpr": [
+            0.0,
+            0.0625,
+            0.3125,
+            0.3125,
+            0.375,
+            0.375,
+            0.4375,
+            0.4375,
+            0.6875,
+            0.6875,
+            1.0,
+            1.0
+          ],
+          "tpr": [
+            0.0,
+            0.0,
+            0.0,
+            0.0625,
+            0.0625,
+            0.25,
+            0.25,
+            0.3125,
+            0.3125,
+            0.375,
+            0.375,
+            1.0
+          ],
+          "thresholds": [
+            null,
+            0.02647656947374344,
+            0.0046906303614377975,
+            0.0027253972366452217,
+            0.0026824609376490116,
+            0.002078562742099166,
+            0.0020239169243723154,
+            0.0019253980135545135,
+            0.001785910688340664,
+            0.0017701067263260484,
+            0.0015608520479872823,
+            0.0012691989541053772
+          ]
+        }
+      },
+      "mean_absolute_score_change": 0.33470726753148483,
+      "mean_signed_score_change": -0.3346950212508091
+    },
+    "mp3_32kbps": {
+      "metrics": {
+        "count": 32,
+        "real_count": 16,
+        "fake_count": 16,
+        "diagnostic_threshold": 0.5,
+        "accuracy": 0.5625,
+        "precision": 0.5555555555555556,
+        "recall": 0.625,
+        "f1": 0.5882352941176471,
+        "confusion_matrix_real_fake": [
+          [
+            8,
+            8
+          ],
+          [
+            6,
+            10
+          ]
+        ],
+        "roc_auc": 0.55859375,
+        "eer_interpolated": 0.4375,
+        "roc": {
+          "fpr": [
+            0.0,
+            0.0,
+            0.0625,
+            0.0625,
+            0.3125,
+            0.3125,
+            0.375,
+            0.375,
+            0.4375,
+            0.4375,
+            0.5,
+            0.5,
+            0.5625,
+            0.5625,
+            0.625,
+            0.625,
+            0.75,
+            0.75,
+            0.875,
+            0.875,
+            1.0,
+            1.0
+          ],
+          "tpr": [
+            0.0,
+            0.0625,
+            0.0625,
+            0.1875,
+            0.1875,
+            0.4375,
+            0.4375,
+            0.5,
+            0.5,
+            0.5625,
+            0.5625,
+            0.625,
+            0.625,
+            0.75,
+            0.75,
+            0.8125,
+            0.8125,
+            0.875,
+            0.875,
+            0.9375,
+            0.9375,
+            1.0
+          ],
+          "thresholds": [
+            null,
+            0.9861351251602173,
+            0.9835726618766785,
+            0.9781506061553955,
+            0.9370302557945251,
+            0.8605661988258362,
+            0.826429009437561,
+            0.7265151143074036,
+            0.7218530178070068,
+            0.6263313889503479,
+            0.593504786491394,
+            0.5079873204231262,
+            0.30942749977111816,
+            0.17447984218597412,
+            0.16528858244419098,
+            0.14183072745800018,
+            0.09298486262559891,
+            0.08937730640172958,
+            0.04681596904993057,
+            0.010553705506026745,
+            0.004893140867352486,
+            0.0035285886842757463
+          ]
+        }
+      },
+      "mean_absolute_score_change": 0.22042903580950224,
+      "mean_signed_score_change": 0.18411128220395767
+    }
+  },
+  "samples": [
+    {
+      "row_index": 48,
+      "sha256": "9403db03d935f3b80524e3e2822f9afd8d4ea7b2454d35928c6e3b49fa2d041d",
+      "label": 0,
+      "score": 0.40246832370758057,
+      "duration_seconds": 2.121,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.40246832370758057,
+        "resampled_8khz": 0.8203281164169312,
+        "noise_20db": 0.0025873836129903793,
+        "noise_10db": 0.0026824609376490116,
+        "mp3_32kbps": 0.593504786491394
+      }
+    },
+    {
+      "row_index": 71,
+      "sha256": "698d0e469175f49a1f50b5c7b1ff2ec00a0b7bd06442ab841ec5ab781e1e3971",
+      "label": 0,
+      "score": 0.006834142375737429,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.006834142375737429,
+        "resampled_8khz": 0.017172008752822876,
+        "noise_20db": 0.0013889807742089033,
+        "noise_10db": 0.001785910688340664,
+        "mp3_32kbps": 0.01037632953375578
+      }
+    },
+    {
+      "row_index": 131,
+      "sha256": "09694b9ad7e92cecdc173389a6f6d067f5163c811b4e3c8d5b9d01febf6db426",
+      "label": 1,
+      "score": 0.0016772568924352527,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.0016772568924352527,
+        "resampled_8khz": 0.0017897502984851599,
+        "noise_20db": 0.001492162817157805,
+        "noise_10db": 0.0013156916247680783,
+        "mp3_32kbps": 0.010553705506026745
+      }
+    },
+    {
+      "row_index": 158,
+      "sha256": "cefa1a2da7888c472cbe446e045558f3ad52690dabd67503fab55eb41343720c",
+      "label": 1,
+      "score": 0.0786811038851738,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.0786811038851738,
+        "resampled_8khz": 0.8313417434692383,
+        "noise_20db": 0.002290032571181655,
+        "noise_10db": 0.0027253972366452217,
+        "mp3_32kbps": 0.214218869805336
+      }
+    },
+    {
+      "row_index": 164,
+      "sha256": "3fd91b893ecfbaf6ab41fbdc06ff11a545b8ae20e68a95444c2e7fa24bc979e7",
+      "label": 0,
+      "score": 0.47404053807258606,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.47404053807258606,
+        "resampled_8khz": 0.039971668273210526,
+        "noise_20db": 0.004037076607346535,
+        "noise_10db": 0.00493817962706089,
+        "mp3_32kbps": 0.9370302557945251
+      }
+    },
+    {
+      "row_index": 185,
+      "sha256": "bee23eae1afa93d0c0b1c17ff0bf5b03450b2f4b0b2da824139e5f08f43fc453",
+      "label": 0,
+      "score": 0.04616645351052284,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.04616645351052284,
+        "resampled_8khz": 0.1519700139760971,
+        "noise_20db": 0.0019210010068491101,
+        "noise_10db": 0.0018639091867953539,
+        "mp3_32kbps": 0.07027485966682434
+      }
+    },
+    {
+      "row_index": 186,
+      "sha256": "cbb536fca2523c544005a61985ae9d097af893b10a70e29c9f5943d91359529d",
+      "label": 1,
+      "score": 0.9833570718765259,
+      "duration_seconds": 2.88,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.9833570718765259,
+        "resampled_8khz": 0.9855802655220032,
+        "noise_20db": 0.001299381721764803,
+        "noise_10db": 0.00128524552565068,
+        "mp3_32kbps": 0.5079873204231262
+      }
+    },
+    {
+      "row_index": 235,
+      "sha256": "891b0c89b6f148756ac0177994cfa6a82059ed243c0a0f38ce07f528df52e0f5",
+      "label": 0,
+      "score": 0.11340998858213425,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.11340998858213425,
+        "resampled_8khz": 0.514832079410553,
+        "noise_20db": 0.0020945759024471045,
+        "noise_10db": 0.0046906303614377975,
+        "mp3_32kbps": 0.0940549448132515
+      }
+    },
+    {
+      "row_index": 240,
+      "sha256": "6148ecda35060937f6de212626eb0cbf4fde6aeb04f82640cbb75175533691f9",
+      "label": 1,
+      "score": 0.7979280352592468,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.7979280352592468,
+        "resampled_8khz": 0.7114893198013306,
+        "noise_20db": 0.00153041270095855,
+        "noise_10db": 0.0012691989541053772,
+        "mp3_32kbps": 0.8730742335319519
+      }
+    },
+    {
+      "row_index": 255,
+      "sha256": "692a8b13f1d258eddc92c9218bf79dc6b86bb129db481da18b62c89165ff1975",
+      "label": 1,
+      "score": 0.04992124065756798,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.04992124065756798,
+        "resampled_8khz": 0.045313552021980286,
+        "noise_20db": 0.0014889203011989594,
+        "noise_10db": 0.0014199931174516678,
+        "mp3_32kbps": 0.17447984218597412
+      }
+    },
+    {
+      "row_index": 270,
+      "sha256": "c5abb202ea8ff51021d86fc0d155402ddfcc669ded5124eb41f26aa59f100b45",
+      "label": 0,
+      "score": 0.22565460205078125,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.22565460205078125,
+        "resampled_8khz": 0.5966732501983643,
+        "noise_20db": 0.0031433915719389915,
+        "noise_10db": 0.0020239169243723154,
+        "mp3_32kbps": 0.7218530178070068
+      }
+    },
+    {
+      "row_index": 352,
+      "sha256": "b02d4abd5ade62f97340185c77c26031273d69d9caa0059c08ed7f98b9ef0ce2",
+      "label": 1,
+      "score": 0.0020964464638382196,
+      "duration_seconds": 1.44,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.0020964464638382196,
+        "resampled_8khz": 0.001705213449895382,
+        "noise_20db": 0.001456773141399026,
+        "noise_10db": 0.0012996835866943002,
+        "mp3_32kbps": 0.6263313889503479
+      }
+    },
+    {
+      "row_index": 389,
+      "sha256": "ab6ad50a341ab2899d6de04ad9bb21acbc1b13559dd6708340be221ce34e257d",
+      "label": 0,
+      "score": 0.949266254901886,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.949266254901886,
+        "resampled_8khz": 0.9269291758537292,
+        "noise_20db": 0.012543715536594391,
+        "noise_10db": 0.009353168308734894,
+        "mp3_32kbps": 0.9392249584197998
+      }
+    },
+    {
+      "row_index": 396,
+      "sha256": "cfa52cdc80ca35c05aed05faf80a8c15a20538198c733330f2aec5e278a31480",
+      "label": 0,
+      "score": 0.03671908751130104,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.03671908751130104,
+        "resampled_8khz": 0.030525822192430496,
+        "noise_20db": 0.0018881380092352629,
+        "noise_10db": 0.0017953756032511592,
+        "mp3_32kbps": 0.09298486262559891
+      }
+    },
+    {
+      "row_index": 428,
+      "sha256": "906de1b54e40bf6c02c44232937f09fab5f43c2ed0d0cb61c69689cf7ed5e4de",
+      "label": 1,
+      "score": 0.001569582731463015,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.001569582731463015,
+        "resampled_8khz": 0.001730172662064433,
+        "noise_20db": 0.0016109455609694123,
+        "noise_10db": 0.0013667704770341516,
+        "mp3_32kbps": 0.0035285886842757463
+      }
+    },
+    {
+      "row_index": 518,
+      "sha256": "315ef3424d29a3e020bb52e68f4936ef640cbe712407f7b40e84b718f4aaf5cc",
+      "label": 1,
+      "score": 0.46384671330451965,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.46384671330451965,
+        "resampled_8khz": 0.7766223549842834,
+        "noise_20db": 0.0020483562257140875,
+        "noise_10db": 0.002213506493717432,
+        "mp3_32kbps": 0.8605661988258362
+      }
+    },
+    {
+      "row_index": 592,
+      "sha256": "87fd6ae412c31c48afded29be7780f2d2788d866062471524a42cecdeb8ab581",
+      "label": 1,
+      "score": 0.00582896638661623,
+      "duration_seconds": 0.5,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.00582896638661623,
+        "resampled_8khz": 0.978293240070343,
+        "noise_20db": 0.0014394945465028286,
+        "noise_10db": 0.001484121661633253,
+        "mp3_32kbps": 0.9104983806610107
+      }
+    },
+    {
+      "row_index": 639,
+      "sha256": "69d1ad0fc56248be2cf25890f96d5a31839288de94be87655b0a41dcd159862c",
+      "label": 1,
+      "score": 0.0606115460395813,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.0606115460395813,
+        "resampled_8khz": 0.13852255046367645,
+        "noise_20db": 0.00178115488961339,
+        "noise_10db": 0.0014738712925463915,
+        "mp3_32kbps": 0.7265151143074036
+      }
+    },
+    {
+      "row_index": 663,
+      "sha256": "58cfddd7b7f453d8470afe382de72ed8c4064769fae5577438b6f978a47093d4",
+      "label": 0,
+      "score": 0.0015336937503889203,
+      "duration_seconds": 0.262,
+      "speech_detected": false,
+      "robustness_scores": {
+        "original": 0.0015336937503889203,
+        "resampled_8khz": 0.0014601113507524133,
+        "noise_20db": 0.0018486266490072012,
+        "noise_10db": 0.0017296342412009835,
+        "mp3_32kbps": 0.04681596904993057
+      }
+    },
+    {
+      "row_index": 724,
+      "sha256": "2ad5598cc58b4ec8d3368d1231ca7f844ef6787ff4101e7815dcaa8735aad500",
+      "label": 0,
+      "score": 0.13239766657352448,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.13239766657352448,
+        "resampled_8khz": 0.07121720165014267,
+        "noise_20db": 0.0017809937708079815,
+        "noise_10db": 0.0015608520479872823,
+        "mp3_32kbps": 0.9835726618766785
+      }
+    },
+    {
+      "row_index": 767,
+      "sha256": "a389a870e6c960c74d6d904f5867f3e40d988d2b790e05b8823792bf98ddbd01",
+      "label": 0,
+      "score": 0.06638579815626144,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.06638579815626144,
+        "resampled_8khz": 0.2278033345937729,
+        "noise_20db": 0.0019254981307312846,
+        "noise_10db": 0.00170503172557801,
+        "mp3_32kbps": 0.30942749977111816
+      }
+    },
+    {
+      "row_index": 769,
+      "sha256": "dd0c8e66766b29deee3f41ef79792c3eeac60f31159d28ba9c90277bd96e8ce0",
+      "label": 1,
+      "score": 0.9822023510932922,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.9822023510932922,
+        "resampled_8khz": 0.9914736747741699,
+        "noise_20db": 0.00146854342892766,
+        "noise_10db": 0.001347051002085209,
+        "mp3_32kbps": 0.979069173336029
+      }
+    },
+    {
+      "row_index": 832,
+      "sha256": "1e593cf85bc736f51e75d61bae8ce7eda6a1bb712c30ee7d6485b2d15e4705e8",
+      "label": 0,
+      "score": 0.2948281764984131,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.2948281764984131,
+        "resampled_8khz": 0.9477708339691162,
+        "noise_20db": 0.0030116417910903692,
+        "noise_10db": 0.007634114008396864,
+        "mp3_32kbps": 0.9706129431724548
+      }
+    },
+    {
+      "row_index": 886,
+      "sha256": "9aa8e7d4afbe4f63fb92a8e9aecb2d65d85144c747e7e34e7f6527a728d959eb",
+      "label": 1,
+      "score": 0.9499745965003967,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.9499745965003967,
+        "resampled_8khz": 0.9910396933555603,
+        "noise_20db": 0.002897458616644144,
+        "noise_10db": 0.0024089037906378508,
+        "mp3_32kbps": 0.8984175324440002
+      }
+    },
+    {
+      "row_index": 901,
+      "sha256": "17a0590d814950414eb085c7d57e6354b1ff811aaa84d819f209b176996ecdac",
+      "label": 0,
+      "score": 0.8121625781059265,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.8121625781059265,
+        "resampled_8khz": 0.9387165904045105,
+        "noise_20db": 0.0016328721540048718,
+        "noise_10db": 0.001643893774598837,
+        "mp3_32kbps": 0.9548890590667725
+      }
+    },
+    {
+      "row_index": 919,
+      "sha256": "0fd6fe587952b6f179229ae9cb32624799b709cb29d9c34ed85fc3a0971e0c6e",
+      "label": 0,
+      "score": 0.833236813545227,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.833236813545227,
+        "resampled_8khz": 0.9117467403411865,
+        "noise_20db": 0.026045989245176315,
+        "noise_10db": 0.02647656947374344,
+        "mp3_32kbps": 0.826429009437561
+      }
+    },
+    {
+      "row_index": 920,
+      "sha256": "0ae4a939fda61abaf9ab3a861d81c5332d419aabbccf371653409b556452e453",
+      "label": 0,
+      "score": 0.014066259376704693,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.014066259376704693,
+        "resampled_8khz": 0.051689669489860535,
+        "noise_20db": 0.0015735982451587915,
+        "noise_10db": 0.0017464003758504987,
+        "mp3_32kbps": 0.16528858244419098
+      }
+    },
+    {
+      "row_index": 956,
+      "sha256": "e61a33327a049acf91d4d1d9e5b42c69a1bd6b173af2f4a5d7adce51708b1655",
+      "label": 0,
+      "score": 0.0022376517299562693,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.0022376517299562693,
+        "resampled_8khz": 0.0025451728142797947,
+        "noise_20db": 0.0017354658339172602,
+        "noise_10db": 0.0017883137334138155,
+        "mp3_32kbps": 0.004893140867352486
+      }
+    },
+    {
+      "row_index": 991,
+      "sha256": "52c6247ef58e642e78a1737bacc72e347c45ffbbc22638e8c09ec86dad2ca3de",
+      "label": 1,
+      "score": 0.9929705262184143,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.9929705262184143,
+        "resampled_8khz": 0.9945759773254395,
+        "noise_20db": 0.002208267105743289,
+        "noise_10db": 0.002078562742099166,
+        "mp3_32kbps": 0.9781506061553955
+      }
+    },
+    {
+      "row_index": 1056,
+      "sha256": "42e9a48a7c8b7b5fb0aa7449aff73be53406d478afd7bf2364b40b014636791a",
+      "label": 1,
+      "score": 0.983565628528595,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.983565628528595,
+        "resampled_8khz": 0.9873170256614685,
+        "noise_20db": 0.0014290034305304289,
+        "noise_10db": 0.0013634208589792252,
+        "mp3_32kbps": 0.9861351251602173
+      }
+    },
+    {
+      "row_index": 1160,
+      "sha256": "2ed7e42d7ba69d6a5408431ebd7d2b210650fa6971e00e1e0262dcbc0babffb2",
+      "label": 0,
+      "score": 0.32676199078559875,
+      "duration_seconds": 1.001,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1193,
+      "sha256": "fed6255fd940d0c285902cc5510e1de8cfead6b94a518a36c282d09089afdbc3",
+      "label": 0,
+      "score": 0.6761752367019653,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1264,
+      "sha256": "45a5246dc0378bef95bfd9c567bd641196b3ea86f1b89f7753624de623e84f91",
+      "label": 0,
+      "score": 0.017720097675919533,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1329,
+      "sha256": "c34d035834ff76a1b0ead2e8689780f84f9133c7e82704e763a28124cad1011c",
+      "label": 0,
+      "score": 0.0024242729414254427,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1344,
+      "sha256": "b7b151a2a79e2b6a9df09294454b678fbad5bb65e49a2f03ef3c6fd5fa2a9875",
+      "label": 0,
+      "score": 0.009844476357102394,
+      "duration_seconds": 0.124,
+      "speech_detected": false
+    },
+    {
+      "row_index": 1365,
+      "sha256": "6ecbe93cde2d20d1d4c17a7bddf8846f7df2e2700609b6118dfc77ac75868dfa",
+      "label": 1,
+      "score": 0.04046287015080452,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.04046287015080452,
+        "resampled_8khz": 0.05080173537135124,
+        "noise_20db": 0.0023787301033735275,
+        "noise_10db": 0.0019253980135545135,
+        "mp3_32kbps": 0.14183072745800018
+      }
+    },
+    {
+      "row_index": 1394,
+      "sha256": "67e1419dd7a6d9bd9ac0b8f770b2c15b12b48445ba950d007d21df5394632f92",
+      "label": 1,
+      "score": 0.004303999710828066,
+      "duration_seconds": 3.0,
+      "speech_detected": true,
+      "robustness_scores": {
+        "original": 0.004303999710828066,
+        "resampled_8khz": 0.014491153880953789,
+        "noise_20db": 0.0016713151708245277,
+        "noise_10db": 0.0017701067263260484,
+        "mp3_32kbps": 0.08937730640172958
+      }
+    },
+    {
+      "row_index": 1435,
+      "sha256": "59e107f872d5036b44d76591e0d656d5fb2039b18aba345118837d8bcbfa99fa",
+      "label": 1,
+      "score": 0.035778746008872986,
+      "duration_seconds": 1.54,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1509,
+      "sha256": "7bb63ca48d2ee7214449814addc6f34997977a1debedcd4d01b389ee22d7869f",
+      "label": 1,
+      "score": 0.8900320529937744,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1510,
+      "sha256": "e067f2b3347f923ea992126c4ece2fcb7ce456d4fb08d2a1c6d34758eb03e55b",
+      "label": 1,
+      "score": 0.14459964632987976,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1515,
+      "sha256": "da58b9c962df280458ae00306b07008036a6c39858a04acc1e978a2490db6755",
+      "label": 0,
+      "score": 0.18724068999290466,
+      "duration_seconds": 2.464,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1534,
+      "sha256": "68e01b0129ca9e0495fcc94f7760c8a11416a43acdff1f02581713a581824a43",
+      "label": 1,
+      "score": 0.02700989693403244,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1545,
+      "sha256": "e20095fae272535916bc09573568651d1ec89927b617a0f896153bd4fbb8a994",
+      "label": 1,
+      "score": 0.002228368306532502,
+      "duration_seconds": 0.16,
+      "speech_detected": false
+    },
+    {
+      "row_index": 1556,
+      "sha256": "ee0be94acffedc516a6a8dbaa0fe400bc5ae875c6f455f7daebff435ef6168e7",
+      "label": 0,
+      "score": 0.010119736194610596,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1600,
+      "sha256": "8e5d5ef7d7a8d0b4033e14b37a9ac344226050b7f08ee1bcb7f6ea52a0460654",
+      "label": 0,
+      "score": 0.08191845566034317,
+      "duration_seconds": 1.226,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1642,
+      "sha256": "3409aa127cbe89df3783dcfb05e8bd83a3d19b870e0e0646967b7ed2634b2388",
+      "label": 0,
+      "score": 0.004938235506415367,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1650,
+      "sha256": "39748314f154c15e74a6c949203c9faad71a43e9151752b361a316fb87811fb9",
+      "label": 1,
+      "score": 0.9829020500183105,
+      "duration_seconds": 0.34,
+      "speech_detected": false
+    },
+    {
+      "row_index": 1669,
+      "sha256": "7fdbedddbc022d2f5e10bd391b476e4e0cf77d138a33bcd6c63e4245d97a383a",
+      "label": 0,
+      "score": 0.0019365492044016719,
+      "duration_seconds": 0.331,
+      "speech_detected": false
+    },
+    {
+      "row_index": 1712,
+      "sha256": "fcd195c0e3103db08a48ab81af07e7e4ac22cdffd419be82275317a8cf49ad1e",
+      "label": 0,
+      "score": 0.0020340795163065195,
+      "duration_seconds": 0.537,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1750,
+      "sha256": "86b3196a71ecbf4bd03c693461af26526a3b558facb6b38bdd4638a55e48f50e",
+      "label": 1,
+      "score": 0.09531965106725693,
+      "duration_seconds": 0.48,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1755,
+      "sha256": "efcd36341309b11ca8f77a8f644bd05a6e5f12832d897414ff938c302fccc786",
+      "label": 1,
+      "score": 0.0533173531293869,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1814,
+      "sha256": "25775716442262a40efc57b30494efa8996d0b0964fb8580595f410da726c5b3",
+      "label": 0,
+      "score": 0.8870519399642944,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1817,
+      "sha256": "0645f0b7f8a149b92a885008caa328bcd7eb3adc2a4fb577ec7743a55e0690c3",
+      "label": 1,
+      "score": 0.09310932457447052,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1845,
+      "sha256": "8d58fb59badfbaafc80d4599dd483971deb5a2fdfe989dbdf5ebdc42fa72b08b",
+      "label": 0,
+      "score": 0.002374261151999235,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1861,
+      "sha256": "fec8eee215e711be01f44477ba36e0cbe2094410db6762aa23ad02b69aea829b",
+      "label": 1,
+      "score": 0.9916616678237915,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1897,
+      "sha256": "4b7d12ee118c06471318db226c8b1f1372e3a487f3e5439733b60e8d2146e2b3",
+      "label": 1,
+      "score": 0.9934523105621338,
+      "duration_seconds": 0.78,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1902,
+      "sha256": "59db636bfb683e13978697f2da6dc42c59804d649cea53808f2b791360202c8c",
+      "label": 0,
+      "score": 0.2503698170185089,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1922,
+      "sha256": "ea5b61e5b2d96ec9a67a063b034185496ac912b2b96d49be3ff418aa6d561710",
+      "label": 0,
+      "score": 0.16435261070728302,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1979,
+      "sha256": "f47829df962231e680d0d8887ace3203b8d8977c95d3ab4d7334d02c611f6d22",
+      "label": 1,
+      "score": 0.07555045187473297,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1980,
+      "sha256": "eadfd597de6ec9f0aa40aa293f9bce99c95d1c8ec5b8cc1c2c76d5e38825b245",
+      "label": 1,
+      "score": 0.9554764032363892,
+      "duration_seconds": 2.36,
+      "speech_detected": true
+    },
+    {
+      "row_index": 1995,
+      "sha256": "bf6e1b5e1aba77b63c3dc65d9ae4fb6352a3e8b19117edceee821d8e04098740",
+      "label": 1,
+      "score": 0.9939170479774475,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2060,
+      "sha256": "100247f17fdecc1ea9a17f0e9ec3c33bda46c978c9c04522a709723a4e176b1e",
+      "label": 1,
+      "score": 0.9070425629615784,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2064,
+      "sha256": "44abb8f35b7209816a35f04a181495a06623d992e164e3edb372e370df8720f0",
+      "label": 0,
+      "score": 0.012251069769263268,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2092,
+      "sha256": "35a934b64e6a7ee9d29826794947a8f2415ee361adabf2f29aaaf01824363521",
+      "label": 0,
+      "score": 0.0035952830221503973,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2110,
+      "sha256": "6f5d798f6ae2a894eddbffe9f1713770c25da81089e90d420c8fadc913f5c688",
+      "label": 1,
+      "score": 0.9928072690963745,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2123,
+      "sha256": "256ad608971186fa7fac7eccc88638f739ceab0f391d9924d1ccb9fce6110c65",
+      "label": 0,
+      "score": 0.004575936123728752,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2138,
+      "sha256": "236635c8fcd5c3621d960e872a450e0f50fc87bc46c981fe6889ad8e4139c591",
+      "label": 0,
+      "score": 0.06732139736413956,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2170,
+      "sha256": "b55b6d59ec7dfd0bf90724860b40298f9025a6e2e1a74f502534ab548c5bb742",
+      "label": 0,
+      "score": 0.006173635832965374,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2217,
+      "sha256": "d28581c771be4b87f7504507eef4af9e3762a10adb7a1cdec82e22e7a4bee9bf",
+      "label": 1,
+      "score": 0.9828431010246277,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2223,
+      "sha256": "2ec3561d8849f35565516fd7d4f55b57f76edc0053c8658c4dd2d09383a536e7",
+      "label": 0,
+      "score": 0.013736872933804989,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2238,
+      "sha256": "7b61c95abde992873b8233d9dffd1fd5de55a216d99ba7afc8a14d57c40de663",
+      "label": 0,
+      "score": 0.9946448802947998,
+      "duration_seconds": 0.29,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2239,
+      "sha256": "b70daeb40466ce28f0c93fdb8c30b0bbd64d7726fab89292de02655a592ba6db",
+      "label": 1,
+      "score": 0.9912851452827454,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2267,
+      "sha256": "7c0c8fff7b596dd5a6b3647a19d577d35d123e9714a5e799c5c5a269ca52c77a",
+      "label": 0,
+      "score": 0.031696490943431854,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2278,
+      "sha256": "030ec15ec9c12ed9541c6a546c90ee3da677a52a0be31ce0bb988d881114188a",
+      "label": 1,
+      "score": 0.9905038475990295,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2347,
+      "sha256": "b7b63eb5ffec69dbabb27e1c4397f27b44852d20c0d7f130716afa37ae3e5ebd",
+      "label": 1,
+      "score": 0.9935153722763062,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2393,
+      "sha256": "b9fe291d7ea603fbe8141983a2be5cb49a2cb091133b2f56a3e5b4e882d5b93f",
+      "label": 1,
+      "score": 0.03674544766545296,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2403,
+      "sha256": "75a9c44819aadb34f92c46bce62b99e10d33959e1546defdd0ee5e55abb0f928",
+      "label": 1,
+      "score": 0.9921745657920837,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2435,
+      "sha256": "ce1c0a2375279d34659b49c080e3a197cd8b87d7911d0561edfdddc85b705a41",
+      "label": 0,
+      "score": 0.0014398283092305064,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2442,
+      "sha256": "4fbc83ed23b0a6abfef444dbfe6d71aa058d4034c708b9c8f12add8fcf9de3f3",
+      "label": 1,
+      "score": 0.9903214573860168,
+      "duration_seconds": 2.1,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2501,
+      "sha256": "78cdfed9388ccc4c9ec6dd5b63d9400f5330e3e4f4d37e3de1962e1b681c10cc",
+      "label": 0,
+      "score": 0.9626690745353699,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2550,
+      "sha256": "b6d4c8e8607d5022104d0266e92c37cfb1f5bd0dac891067c58b24271ab95b0c",
+      "label": 1,
+      "score": 0.8058773875236511,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2572,
+      "sha256": "38f07e25932d919560abe224ee5e8e48fd3e3888be2875f8dddbdf277c26f59a",
+      "label": 0,
+      "score": 0.9851543307304382,
+      "duration_seconds": 2.293,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2643,
+      "sha256": "bef048134e037a6e62c8f8fb39494e051743d817ef00cb4763ed75d168c89aaa",
+      "label": 0,
+      "score": 0.14835608005523682,
+      "duration_seconds": 2.56,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2650,
+      "sha256": "e59df7ad13fcdad1ef7e7635de6b5d0f3bd90f23d9820ea1410896f5a658c51e",
+      "label": 1,
+      "score": 0.9807677865028381,
+      "duration_seconds": 0.34,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2691,
+      "sha256": "fd665052663af0c92f9012cb47bf60b6f5563a4838682b7a4c9cf00841be2b4d",
+      "label": 1,
+      "score": 0.31578564643859863,
+      "duration_seconds": 1.28,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2700,
+      "sha256": "777948236a450e0b352b7b4f5bf810949eb3d1e1b30577fb295371b36dff4489",
+      "label": 0,
+      "score": 0.3748670816421509,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2719,
+      "sha256": "b1e104a11a81b55b77810b66325d36625f6243ca477469f012320db8408483dc",
+      "label": 0,
+      "score": 0.001864846097305417,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2720,
+      "sha256": "a84b20fc4599efc90e6543fe2638170357fb9d5b79cfd4fd504f0cf9d3482f01",
+      "label": 1,
+      "score": 0.983082115650177,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2736,
+      "sha256": "1694a8c4edd8c585e435cfaac9aa03c82399eb527c2207da5aa734ca3e5abbe4",
+      "label": 0,
+      "score": 0.036791715770959854,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2738,
+      "sha256": "ac7582fd3e149cef94b19e97945b5cc61fde3301e376a37cf7a60a9013c890d6",
+      "label": 1,
+      "score": 0.00611148402094841,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2740,
+      "sha256": "26d06d01bfb9dcdff02311bb0583864a9b39905613b4a3aeafa8b5325ece5d3a",
+      "label": 1,
+      "score": 0.49128463864326477,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2792,
+      "sha256": "3224d536f6275fed6f2b62e4b769013031cda9d27444a9e1ab2a0fdca4ff2b5c",
+      "label": 1,
+      "score": 0.0019563091918826103,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2811,
+      "sha256": "232e5073368d5a5d7cf74a3e6b6adf0b57572738e677b17842a650d18d629646",
+      "label": 0,
+      "score": 0.023301079869270325,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2815,
+      "sha256": "1bf75373de091c8d92c925b181300dc30ae587c0e8598e19a46d6f0c91fff072",
+      "label": 0,
+      "score": 0.01906455121934414,
+      "duration_seconds": 1.326,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2825,
+      "sha256": "6ad62c00a737235165d619674ba2a4bae1c58eac723db2e997c9c445bb0dbc0f",
+      "label": 1,
+      "score": 0.983953595161438,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2847,
+      "sha256": "8a43a5e465236804fdc2d4b523d1d067a5350d08cac6d81a0fa717b8159dba69",
+      "label": 0,
+      "score": 0.798495888710022,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2868,
+      "sha256": "adffb69bc838aed97ce09cfc59b84952963f91dbfaf246657d5f0a537ca87de4",
+      "label": 0,
+      "score": 0.9816905856132507,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2877,
+      "sha256": "2c274d77ac174a31d0a926d446b098ce20550ca099e9e338ca2e4d6218685969",
+      "label": 1,
+      "score": 0.021474689245224,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2909,
+      "sha256": "c547a485495e165b21af4f3edbe73ffce4c7a7cfcc024d5feac5f7d16143a805",
+      "label": 0,
+      "score": 0.001986639341339469,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2959,
+      "sha256": "46ef831c1c796dc4d1df347957c8f5c2c244ff1125be09baa5f91b31c3ec23e1",
+      "label": 1,
+      "score": 0.0790475457906723,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2965,
+      "sha256": "32eedba3a3edd97ec37be49b6cc5045d28908deba8d4f5f11ce1c6cdb308a509",
+      "label": 0,
+      "score": 0.0066168527118861675,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 2988,
+      "sha256": "1b5bcff2ea77cdf576f68dd730e74d0fb472c7c89a6a8acb65ec19a75426c84b",
+      "label": 0,
+      "score": 0.0060006543062627316,
+      "duration_seconds": 1.972,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3124,
+      "sha256": "c7cb4d6551933cd73b2dd7865043cd05533fb8cff12656613b886d0d34da2c82",
+      "label": 1,
+      "score": 0.9806698560714722,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3168,
+      "sha256": "23b6bfca390008cf57598213b22c4925bb7e480204eb9ff263d4c209a23e0044",
+      "label": 1,
+      "score": 0.9915273785591125,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3227,
+      "sha256": "8645949276bc4738cdfbcf47bb611061cf120713689d70f46b12e8fbfbbc2771",
+      "label": 0,
+      "score": 0.377219557762146,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3274,
+      "sha256": "6d1a97c2e4d54c4f1ea08529063eae3b36bd6d9e3d58206848130d80e3ca29f5",
+      "label": 0,
+      "score": 0.8487750887870789,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3276,
+      "sha256": "3f7dd618516a986e634767c775ee7debc9d17f575dd3e51c4d50321c33f81c87",
+      "label": 1,
+      "score": 0.9863681197166443,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3307,
+      "sha256": "17901dc03f34932b5cb018144971e98f2a9faf6aebfa62f8df830a763cb1ad2a",
+      "label": 1,
+      "score": 0.028002485632896423,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3313,
+      "sha256": "c4a6983571a15bfc863f93cd1353b35eb8d7c8a8db2d0e6a224dbfa9ce3ad80a",
+      "label": 1,
+      "score": 0.0021341433748602867,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3332,
+      "sha256": "b82dbeaf1746d88b882599292b81eaec94d9eca8f6208154ad334c05e47874f5",
+      "label": 0,
+      "score": 0.9505015015602112,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3347,
+      "sha256": "33cbce75378a540505689facca6d33fe034ceb83dabe5092926660db43a7e82c",
+      "label": 1,
+      "score": 0.003756826976314187,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3404,
+      "sha256": "6576b283ca19b591694baba91ebd1ac7934b9ac16cb79ea335adeec53ab652e2",
+      "label": 1,
+      "score": 0.41895782947540283,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3451,
+      "sha256": "0e01095ce8f8ff57f1398d99da1ec20608793e2386093554fa07952a6b68e433",
+      "label": 0,
+      "score": 0.016077926382422447,
+      "duration_seconds": 0.404,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3455,
+      "sha256": "14b635c659f76a5c9d8a5167d9183eab9806104e7e80f3c8a4579a16f2b88577",
+      "label": 1,
+      "score": 0.48990052938461304,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3497,
+      "sha256": "ece0d97240100a7ef22c3a132a8e10e94659a7ca37ea9d17447fdc29761de63a",
+      "label": 1,
+      "score": 0.014990022405982018,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3533,
+      "sha256": "c2fb4a548abade2a68b0e04887c64ed1e70baa311d90b7b3d90c6870fc19aaf1",
+      "label": 1,
+      "score": 0.7031412124633789,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3539,
+      "sha256": "9867a7b13f2679f1d86f18a91b21a6bb5a57c4f9340eb3bf286ffde6e6708ae2",
+      "label": 0,
+      "score": 0.582655131816864,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3579,
+      "sha256": "34e2d2bd4d44b39608b6658ace45d91b02b4b321e65747278097ae25585144a5",
+      "label": 0,
+      "score": 0.4247077703475952,
+      "duration_seconds": 0.513,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3591,
+      "sha256": "27b8d9d5856f0f3c1b703fa55042b893cc82f17a33e8269b54e2fbf267702805",
+      "label": 1,
+      "score": 0.3845115602016449,
+      "duration_seconds": 1.6,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3641,
+      "sha256": "e8d82171f42983013e63556a17ba5674113140fa86884cc6c3bb9e0928b7855d",
+      "label": 1,
+      "score": 0.09295198321342468,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3674,
+      "sha256": "399c073a858477935b102f6e349e2ce6ea01fd87d5f1d633308ddc0fd6f97b2c",
+      "label": 0,
+      "score": 0.002223511692136526,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3720,
+      "sha256": "81820fd3689997ac853a4d4969692a9082d3c4783cf547a5009526b6799ab329",
+      "label": 0,
+      "score": 0.002142839366570115,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3777,
+      "sha256": "bd925cbf07f2b390c3b061ae60b62c3c8d109c3db444734780d7f0aa7c1785c4",
+      "label": 0,
+      "score": 0.004170016851276159,
+      "duration_seconds": 0.552,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3784,
+      "sha256": "1d6ff3c3a3f7e5e3764b2974efdd53e7a0d053372d6706bf5d8e3da454033c70",
+      "label": 0,
+      "score": 0.0017566853202879429,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3815,
+      "sha256": "2bef1f6c447868b78c3493be32ebced7f928eaf593f3a8243e9c094ed2b6b304",
+      "label": 1,
+      "score": 0.00817947369068861,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3841,
+      "sha256": "eba5af86baab97604e4a866bc27d7253f7bfaf219154c5e244601af64fd7374a",
+      "label": 0,
+      "score": 0.16545067727565765,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3848,
+      "sha256": "7b9b0b129e0612d54c47ec3af4c6defd275d7943982975da57ac4c33b873f097",
+      "label": 1,
+      "score": 0.9846960306167603,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    },
+    {
+      "row_index": 3880,
+      "sha256": "ce018c324de5e3a8441b38bf2545534c5801c8db7b01888686f83af90b2a1393",
+      "label": 1,
+      "score": 0.04074423760175705,
+      "duration_seconds": 3.0,
+      "speech_detected": true
+    }
+  ]
+}
